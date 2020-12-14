@@ -17,7 +17,7 @@ export class SignInComponent implements OnInit {
 
     signIn(event) {
       event.preventDefault();
-      this.router.navigate(['/home']);
+      this.router.navigate(['/member/home']);
 
     }
 

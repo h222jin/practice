@@ -20,7 +20,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: "",
+    path: "member",
     component: MainLayoutComponent,
     children: [
       {
@@ -34,6 +34,10 @@ const routes: Routes = [
       {
         path: "todo",
         loadChildren: "./features/todo/todo.module#TodoModule"
+      },
+      {
+        path: "chart",
+        loadChildren: "./features/chart/chart.module#ChartModule"
       }
     ]
   }

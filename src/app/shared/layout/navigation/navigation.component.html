@@ -12,37 +12,44 @@
 
         <ul saSmartMenu>
             <li>
-                <a routerLink="/home" title="home">
+                <a routerLink="/member/home" title="home">
                     <i class="fa fa-lg fa-fw fa-home"></i>
                     <span class="menu-item-parent">{{'Home' | i18n}}</span>
                 </a>
             </li>
 
             <li>
-                <a routerLink="/todo" title="todo">
-                    <i class="fa fa-lg fa-fw fa-toggle-down"></i>
-                    <span class="menu-item-parent">{{'Todo' | i18n}}</span>
-                </a>
-            </li>
-
-
-
-            <li>
-                <a routerLink="/access" title="access">
+                <a routerLink="/member/access" title="access">
                     <i class="fa fa-lg fa-fw fa-user"></i>
                     <span class="menu-item-parent">{{'Management' | i18n}}</span>
                 </a>
                 <ul>
                     <li routerLinkActive="active">
-                        <a routerLink="/access/register"> {{ 'register' | i18n }}</a>
+                        <a routerLink="/member/access/register"> {{ 'register' | i18n }}</a>
                     </li>
                 </ul>
                 <ul>
                     <li routerLinkActive="active">
-                        <a routerLink="/access/second-management"> {{ 'tree Component' | i18n }}</a>
+                        <a routerLink="/member/access/second-management"> {{ 'tree Component' | i18n }}</a>
                     </li>
                 </ul>
             </li>
+
+
+            <li>
+                <a routerLink="/member/todo" title="todo">
+                    <i class="fa fa-lg fa-fw fa-toggle-down"></i>
+                    <span class="menu-item-parent">{{'Todo' | i18n}}</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/member/chart" title="chart">
+                    <i class="fa fa-lg fa-fw fa-bar-chart"></i>
+                    <span class="menu-item-parent">{{'Chart' | i18n}}</span>
+                </a>
+            </li>
+
 
         </ul>
     </nav>
