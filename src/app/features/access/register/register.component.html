@@ -1,0 +1,72 @@
+<div id="content">
+    <div class="col-sm-12">
+        <article class="col-sm-8">
+            <sa-big-breadcrumbs [items]="['출입자 등록', '출입자 등록 페이지']"
+                                icon="check"
+                                class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></sa-big-breadcrumbs>
+        </article>
+        <article class="col-sm-12 col-md-12">
+            <div sa-widget [editbutton]="false" [custombutton]="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                    <h2>Visitor Register Form </h2>
+                </header>
+                <div>
+                    <div class="widget-body no-padding">
+
+                        <!--                        <sa-review-form></sa-review-form>-->
+
+                        <form id="review-form" class="smart-form" novalidate="novalidate">
+                            <header>
+                                방문자 출입 등록
+                            </header>
+
+                            <fieldset>
+
+                                <section>
+                                    <label class="dropdown-toggle">
+                                        <select [(ngModel)]="searchOptions.company" name="company"
+                                                class="form-control">
+                                            <option value="" disabled> 방문 회사</option>
+                                            <option [value]="company"
+                                                    *ngFor="let company of companyFilter">{{company}}</option>
+                                        </select>
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="input"> <i class="icon-append fa fa-user"></i>
+                                        <input type="text" name="name" id="name" placeholder="이름"/>
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+                                        <input type="email" name="email" id="email" placeholder="연락처"/>
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="label"></label>
+                                    <label class="textarea"> <i class="icon-append fa fa-comment"></i>
+                                        <textarea rows="3" name="review" id="review" placeholder="방문 사유"></textarea>
+                                    </label>
+                                </section>
+
+
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    <strong>등 록</strong>
+                                </button>
+                            </footer>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+
+

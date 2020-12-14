@@ -1,0 +1,114 @@
+[
+    {
+      "name": "kaclef",
+      "gender": "male",
+      "groupName": "soran",
+      "company": "HappyRobot",
+      "position": "vocal"
+    },
+    {
+      "name": "meno",
+      "gender": "male",
+      "groupName": "soran",
+      "company": "HappyRobot",
+      "position": "base"
+    },
+    {
+      "name": "youil",
+      "gender": "male",
+      "groupName": "soran",
+      "company": "HappyRobot",
+      "position": "drum"
+    },
+    {
+      "name": "taewook",
+      "gender": "male",
+      "groupName": "soran",
+      "company": "HappyRobot",
+      "position": "guitar"
+    },
+    {
+      "name": "yoonju",
+      "gender": "female",
+      "groupName": "okdal",
+      "company": "MSBSound",
+      "position": "vocal"
+    },
+    {
+      "name": "sejin",
+      "gender": "female",
+      "groupName": "okdal",
+      "company": "MSBSound",
+      "position": "vocal"
+    },
+    {
+      "name": "10cm",
+      "gender": "male",
+      "groupName": "10cm",
+      "company": "MSBSound",
+      "position": "vocal"
+    },
+    {
+      "name": "parkmoonchi",
+      "gender": "female",
+      "groupName": "solo",
+      "company": "MSBSound",
+      "position": "piano"
+    },
+    {
+      "name": "cheeze",
+      "gender": "female",
+      "groupName": "cheeze",
+      "company": "MSBSound",
+      "position": "vocal"
+    },
+    {
+      "name": "stella",
+      "gender": "female",
+      "groupName": "solo",
+      "company": "MSBSound",
+      "position": "piano"
+    },
+    {
+      "name": "wonseok",
+      "gender": "male",
+      "groupName": "daybreak",
+      "company": "HappyRobot",
+      "position": "vocal"
+    },
+    {
+      "name": "jihyoung",
+      "gender": "male",
+      "groupName": "solo",
+      "company": "yoursummer",
+      "position": "vocal"
+    },
+    {
+      "name": "joophi",
+      "gender": "male",
+      "groupName": "solo",
+      "company": "yoursummer",
+      "position": "guitar"
+    },
+    {
+      "name": "minseok",
+      "gender": "male",
+      "groupName": "melomance",
+      "company": "MPMG",
+      "position": "vocal"
+    },
+    {
+      "name": "dongmin",
+      "gender": "male",
+      "groupName": "soran",
+      "company": "HappyRobot",
+      "position": "piano"
+    },
+    {
+      "name": "donghwan",
+      "gender": "male",
+      "groupName": "melomance",
+      "company": "MPMG",
+      "position": "piano"
+    }
+  ]

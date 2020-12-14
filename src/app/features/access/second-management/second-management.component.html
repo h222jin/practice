@@ -1,0 +1,202 @@
+<div id="content">
+    <div>
+        <div class="col-sm-12">
+            <article class="col-sm-8">
+                <sa-big-breadcrumbs [items]="['일정 관리']" icon="calendar"
+                                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></sa-big-breadcrumbs>
+            </article>
+        </div>
+    </div>
+
+    <div>
+        <sa-widgets-grid>
+            <!-- row -->
+            <div class="row">
+                <!-- NEW WIDGET START -->
+                <article class="col-sm-12 col-md-12 col-lg-12">
+                    <!-- Widget ID (each widget will need unique ID)-->
+                    <div sa-widget [editbutton]="false" color="orange">
+                        <!-- widget options:
+                        usage: <div sa-widget id="wid-id-0" [editbutton]="false">
+                        [colorbutton]="false"
+                        [editbutton]="false"
+                        [togglebutton]="false"
+                        [deletebutton]="false"
+                        [fullscreenbutton]="false"
+                        [custombutton]="false"
+                        [collapsed]="true"
+                        [sortable]="false"
+                        -->
+                        <header>
+                            <span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i> </span>
+                            <h2>Organizing view </h2>
+                        </header>
+                        <!-- widget div-->
+                        <div>            <!-- widget content -->
+                            <div class="widget-body">
+                                <div class="widget-body-toolbar bg-color-white">
+                                    <form class="form-inline" role="form">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-10">
+                                                <div class="form-group">
+                                                    <label class="sr-only">Task title</label>
+                                                    <input [(ngModel)]="task" name="task" class="form-control input-sm"
+                                                           placeholder="My Task">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only">Pick Week</label>
+                                                    <select [(ngModel)]="week" name="week"
+                                                            class="form-control input-sm">
+                                                        <option>Week 1</option>
+                                                        <option>Week 2</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only">Days</label>
+                                                    <select [(ngModel)]="day" name="day" class="form-control input-sm">
+
+                                                        <option [value]="day" *ngFor="let day of days">{{day}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-2 text-align-right">
+                                                <button (click)="add()" class="btn btn-warning btn-xs">
+                                                    <i class="fa fa-plus"></i> Add
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div>
+                                    <sa-tree-view [items]="demo1" (change)="changeLstener($event)"></sa-tree-view>
+                                </div>
+                            </div>
+                            <!-- end widget content -->
+                        </div>
+                        <!-- end widget div -->
+                    </div>
+                    <!-- end widget -->
+                </article>
+                <!-- WIDGET END -->
+
+            </div>
+            <!-- end row -->
+            <!-- row -->
+            <div class="row">
+            </div>
+            <!-- end row -->
+        </sa-widgets-grid>
+
+    </div>
+
+</div>
+
+
+<!--    검색 바 들어가는 자리-->
+<!--  <div class="row">-->
+<!--    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--      <div class="widget-body no-padding">-->
+<!--        <div class="widget-body-toolbar">-->
+<!--          <div class="form-inline">-->
+<!--            <div class="row">-->
+<!--              <br>-->
+<!--              <div class="col-sm-12 col-md-10">-->
+<!--                <div class="form-group">-->
+<!--                  <select [(ngModel)]="searchOptions.gender" #gender name="gender"-->
+<!--                          class="form-control input-sm">-->
+<!--                    <option value="" disabled> gender</option>-->
+<!--                    <option [value]="gender" *ngFor="let gender of genders">{{gender}}</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                &nbsp;-->
+<!--                <div class="form-group">-->
+<!--                  <select [(ngModel)]="searchOptions.group" #group name="group"-->
+<!--                          class="form-control input-sm">-->
+<!--                    <option value="" disabled> group</option>-->
+<!--                    <option [value]="group" *ngFor="let group of groupList">{{group}}</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                &nbsp;-->
+<!--                <div class="form-group">-->
+<!--                  <select [(ngModel)]="searchOptions.company" #company name="company"-->
+<!--                          class="form-control input-sm">-->
+<!--                    <option value="" disabled> company</option>-->
+<!--                    <option [value]="company"-->
+<!--                            *ngFor="let company of companyList">{{company}}</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                &nbsp;-->
+<!--                <div class="form-group">-->
+<!--                  <select [(ngModel)]="searchOptions.position" #position name="position"-->
+<!--                          class="form-control input-sm">-->
+<!--                    <option value="" disabled> position</option>-->
+<!--                    <option [value]="position"-->
+<!--                            *ngFor="let position of positionList">{{position}}</option>-->
+<!--                  </select>-->
+<!--                </div>-->
+<!--                &nbsp;-->
+<!--                &lt;!&ndash;                                <div class="input-group">&ndash;&gt;-->
+<!--                &lt;!&ndash;                                    <div class="icon-addon">&ndash;&gt;-->
+<!--                &lt;!&ndash;                                        <input type="text" id="search" class="form-control"&ndash;&gt;-->
+<!--                &lt;!&ndash;                                               [(ngModel)]="controls.filter"&ndash;&gt;-->
+<!--                &lt;!&ndash;                                               placeholder='Type to filter the table...'&ndash;&gt;-->
+<!--                &lt;!&ndash;                                               (keyup)='updateFilter($event)'>&ndash;&gt;-->
+<!--                &lt;!&ndash;                                        <label style="z-index: 22" for="search" class="fa fa-search" rel="tooltip"&ndash;&gt;-->
+<!--                &lt;!&ndash;                                               title="search"></label>&ndash;&gt;-->
+<!--                &lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--                &lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--                &nbsp;-->
+
+<!--                <div class="form-group">-->
+<!--                  <a class="btn btn-info btn-sm" type="button">-->
+<!--                    <i class="fa fa-search"></i> search-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                &nbsp;-->
+
+<!--                <div class="form-group">-->
+<!--                  <button class="btn btn-warning btn-sm" >-->
+<!--                    &lt;!&ndash;                                            [attr.disabled]="userInfo  ? null : ''"&ndash;&gt;-->
+
+<!--                    <i class="fa fa-comment-o"></i> mms-->
+<!--                  </button>-->
+<!--                </div>-->
+
+<!--              </div>-->
+<!--              &lt;!&ndash;                            <div class=" col-md-2 text-align-right">&ndash;&gt;-->
+<!--              &lt;!&ndash;                                <div class="form-group">&ndash;&gt;-->
+<!--              &lt;!&ndash;                                    <select class=" form-control " style="width: 70px;"&ndash;&gt;-->
+<!--              &lt;!&ndash;                                            (ngModelChange)="updatePageSize($event)"&ndash;&gt;-->
+<!--              &lt;!&ndash;                                            [(ngModel)]="controls.pageSize">&ndash;&gt;-->
+<!--              &lt;!&ndash;                                        <option>10</option>&ndash;&gt;-->
+<!--              &lt;!&ndash;                                        <option>20</option>&ndash;&gt;-->
+<!--              &lt;!&ndash;                                        <option>30</option>&ndash;&gt;-->
+<!--              &lt;!&ndash;                                        <option>50</option>&ndash;&gt;-->
+<!--              &lt;!&ndash;                                    </select>&ndash;&gt;-->
+<!--              &lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--              &lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <br>-->
+
+<!--            &lt;!&ndash;표 들어가는 자리&ndash;&gt;-->
+<!--            <div class="row">-->
+<!--              <div class="form-inline">-->
+<!--                <div class="no-padding">-->
+<!--                  <div class="row" style="padding: 8px 12px">-->
+<!--                    <article class="col-sm-12 ">-->
+<!--                      <div class="row">-->
+
+<!--&lt;!&ndash;                        표가 들어가는 자리 &ndash;&gt;-->
+
+<!--                      </div>-->
+<!--                    </article>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </article>-->
+<!--  </div>-->
+

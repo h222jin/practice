@@ -1,0 +1,47 @@
+<div id="content" class="container">
+    <div class="row" style="margin-top:10%">
+        <div class="col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+            <div class="well no-padding">
+                <form class="smart-form client-form">
+                    <header>
+                        TEST PROJECT | SIGN UP
+                    </header>
+                    <fieldset>
+                        <section>
+                            <label class="label">아이디(사번)</label>
+                            <label class="input"> <i class="icon-append fa fa-user"></i>
+                                <input autofocus type="text" name="loginId" data-smart-validate-input=""
+                                       data-required="" data-message-required="Please enter your ID"
+                                       data-message-email="Please enter a VALID ID">
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i>
+                                    아이디(사번)을 입력해주세요.</b></label>
+                        </section>
+                        <section>
+                            <label class="label">비밀번호</label>
+                            <label class="input"> <i class="icon-append fa fa-lock"></i>
+                                <input type="password" name="password" data-smart-validate-input="" data-required=""
+                                       data-minlength="8" data-maxnlength="20"
+                                       data-message="Please enter your password">
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i>
+                                    비밀번호를 입력해주세요.</b> </label>
+                        </section>
+                        <section>
+                            <label class="label">소속 부서</label>
+                            <label class="input"> <i class="icon-append fa fa-group"></i>
+                                <input type="password" name="password" data-smart-validate-input="" data-required=""
+                                       data-minlength="8" data-maxnlength="20"
+                                       data-message="Please enter your password">
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i>
+                                    소속 부서 명을 입력해 주세요.</b> </label>
+                        </section>
+                    </fieldset>
+                    <footer>
+                        <button class="btn btn-danger" (click)="signup($event)">
+                            Sign up
+                        </button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1k8a1PHJrXpUuIW1UAgoImZF6El" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/features/auth" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/features/_service" />
+      <recent name="$PROJECT_DIR$/src/app/features" />
+      <recent name="$PROJECT_DIR$/src/assets/img/custom" />
+      <recent name="$PROJECT_DIR$/src/app/features/auth/join" />
+      <recent name="$PROJECT_DIR$/src/app/features/auth" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/features/auth" />
+      <recent name="$PROJECT_DIR$/src/app/features/_service" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/assets/api/tables" />
+      <recent name="$PROJECT_DIR$/src/app/shared" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E2E Tests (smartadmin-angular-seed-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="npm.Angular CLI Server" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="Protractor.E2E Tests (smartadmin-angular-seed-e2e)" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="" />
+      <created>1605084456381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605084456381</updated>
+      <workItem from="1605084457904" duration="158000" />
+      <workItem from="1605085415192" duration="1340000" />
+      <workItem from="1605489833429" duration="3888000" />
+      <workItem from="1605493909746" duration="295000" />
+      <workItem from="1605494809337" duration="23272000" />
+      <workItem from="1605575098553" duration="22690000" />
+      <workItem from="1606383778666" duration="1085000" />
+      <workItem from="1606719956283" duration="9347000" />
+      <workItem from="1606875493475" duration="18888000" />
+      <workItem from="1606965067991" duration="20178000" />
+      <workItem from="1607049802263" duration="19234000" />
+      <workItem from="1607309048338" duration="15596000" />
+      <workItem from="1607395159861" duration="16941000" />
+      <workItem from="1607484474445" duration="5706000" />
+      <workItem from="1607570186851" duration="13368000" />
+      <workItem from="1607658513058" duration="3736000" />
+      <workItem from="1607680083422" duration="1940000" />
+      <workItem from="1607918104233" duration="3063000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="594" y="295" key="#Inspections" timestamp="1607668168759">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="594" y="295" key="#Inspections/0.25.1920.1175@0.25.1920.1175" timestamp="1607668168759" />
+    <state x="245" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606875520340">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084616516" />
+    <state x="1685" y="144" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605493706974" />
+    <state x="245" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1606875520340" />
+    <state x="673" y="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607571301132">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="2113" y="351" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605520273521" />
+    <state x="673" y="390" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1607571301132" />
+    <state x="773" y="304" key="#com.intellij.ide.util.MemberChooser" timestamp="1607580800251">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="2213" y="274" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605520716633" />
+    <state x="773" y="304" key="#com.intellij.ide.util.MemberChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1607580800251" />
+    <state x="289" y="338" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607668290365">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="1729" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605495141451" />
+    <state x="289" y="338" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607668290365" />
+    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607579947822">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1607579947822" />
+    <state width="1878" height="67" key="GridCell.Tab.0.bottom" timestamp="1607932725812">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
+    <state width="1878" height="67" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1607932725812" />
+    <state width="1878" height="67" key="GridCell.Tab.0.center" timestamp="1607932725810">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
+    <state width="1878" height="67" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1607932725810" />
+    <state width="1878" height="67" key="GridCell.Tab.0.left" timestamp="1607932725810">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
+    <state width="1878" height="67" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1607932725810" />
+    <state width="1878" height="67" key="GridCell.Tab.0.right" timestamp="1607932725811">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
+    <state width="1878" height="67" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1607932725811" />
+    <state x="560" y="345" key="Vcs.Push.Dialog.v2" timestamp="1607589354218">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="560" y="345" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1607589354218" />
+    <state x="259" y="322" width="1052" height="581" key="find.popup" timestamp="1607932551099">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
+    <state x="259" y="322" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1607932551099" />
+    <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate/0.25.1920.1175@0.25.1920.1175" timestamp="1607325113763" />
+    <state x="683" y="348" key="refactoring.ChangeSignatureDialog" timestamp="1607582044187">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="683" y="348" key="refactoring.ChangeSignatureDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607582044187" />
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1607581190935">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605578787305" />
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1607581190935" />
+  </component>
+</project>

@@ -1,0 +1,190 @@
+<div id="content">
+    <div>
+        <div class="col-sm-12">
+            <article class="col-sm-8">
+                <sa-big-breadcrumbs [items]="['출입자 관리', '검색 조건에 맞는 출입자를 확인.']"
+                                    icon="unlock-alt"
+                                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></sa-big-breadcrumbs>
+            </article>
+        </div>
+    </div>
+
+    <!--    검색 바 들어가는 자리-->
+    <div class="row">
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="widget-body no-padding">
+                <div class="widget-body-toolbar">
+                    <div class="form-inline">
+                        <div class="row">
+                            <br>
+                            <div class="col-sm-12 col-md-10">
+                                <div class="form-group">
+                                    <select [(ngModel)]="searchOptions.gender" #gender name="gender"
+                                            class="form-control input-sm">
+                                        <option value="" disabled> gender</option>
+                                        <option [value]="gender" *ngFor="let gender of genders">{{gender}}</option>
+                                    </select>
+                                </div>
+                                &nbsp;
+                                <div class="form-group">
+                                    <select [(ngModel)]="searchOptions.group" #group name="group"
+                                            class="form-control input-sm">
+                                        <option value="" disabled> group</option>
+                                        <option [value]="group" *ngFor="let group of groupList">{{group}}</option>
+                                    </select>
+                                </div>
+                                &nbsp;
+                                <div class="form-group">
+                                    <select [(ngModel)]="searchOptions.company" #company name="company"
+                                            class="form-control input-sm">
+                                        <option value="" disabled> company</option>
+                                        <option [value]="company"
+                                                *ngFor="let company of companyList">{{company}}</option>
+                                    </select>
+                                </div>
+                                &nbsp;
+                                <div class="form-group">
+                                    <select [(ngModel)]="searchOptions.position" #position name="position"
+                                            class="form-control input-sm">
+                                        <option value="" disabled> position</option>
+                                        <option [value]="position"
+                                                *ngFor="let position of positionList">{{position}}</option>
+                                    </select>
+                                </div>
+                                &nbsp;
+                                <!--                                <div class="input-group">-->
+                                <!--                                    <div class="icon-addon">-->
+                                <!--                                        <input type="text" id="search" class="form-control"-->
+                                <!--                                               [(ngModel)]="controls.filter"-->
+                                <!--                                               placeholder='Type to filter the table...'-->
+                                <!--                                               (keyup)='updateFilter($event)'>-->
+                                <!--                                        <label style="z-index: 22" for="search" class="fa fa-search" rel="tooltip"-->
+                                <!--                                               title="search"></label>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                &nbsp;
+
+                                <div class="form-group">
+                                    <a class="btn btn-info btn-sm" type="button">
+                                        <i class="fa fa-search"></i> search
+                                    </a>
+                                </div>
+                                &nbsp;
+
+                                <div class="form-group">
+                                    <button class="btn btn-warning btn-sm" (click)="openMmsTemplate()">
+                                        <!--                                            [attr.disabled]="userInfo  ? null : ''"-->
+
+                                        <i class="fa fa-comment-o"></i> mms
+                                    </button>
+                                </div>
+
+                            </div>
+                            <!--                            <div class=" col-md-2 text-align-right">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <select class=" form-control " style="width: 70px;"-->
+                            <!--                                            (ngModelChange)="updatePageSize($event)"-->
+                            <!--                                            [(ngModel)]="controls.pageSize">-->
+                            <!--                                        <option>10</option>-->
+                            <!--                                        <option>20</option>-->
+                            <!--                                        <option>30</option>-->
+                            <!--                                        <option>50</option>-->
+                            <!--                                    </select>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                        </div>
+                        <br>
+
+                        <!--표 들어가는 자리-->
+                        <div class="row">
+                            <div class="form-inline">
+                                <div class="no-padding">
+                                    <div class="row" style="padding: 8px 12px">
+                                        <article class="col-sm-12 ">
+                                            <div class="row">
+                                                <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div sa-widget [editbutton]="false">
+                                                        <header>
+                                                            <span class="widget-icon"> <i
+                                                                    class="fa fa-table"></i> </span>
+
+                                                            <h2> member table </h2>
+                                                        </header>
+                                                        <div>
+                                                            <div class="widget-body no-padding">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th>
+                                                                                <label>
+                                                                                    <input type="checkbox"
+                                                                                           name="checkbox-inline">
+                                                                                    <i></i>
+                                                                                </label>
+                                                                            </th>
+                                                                            <th class="text-align-center">이름</th>
+                                                                            <th class="text-align-center">성별</th>
+                                                                            <th class="text-align-center">그룹</th>
+                                                                            <th class="text-align-center">회사</th>
+                                                                            <th class="text-align-center">포지션</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr *ngFor="let dataList of rows">
+                                                                            <td>
+                                                                                <label>
+                                                                                    <input type="checkbox"
+                                                                                           name="checkbox-inline">
+                                                                                    <i></i>
+                                                                                </label>
+                                                                            </td>
+                                                                            <td>{{dataList.name}}</td>
+                                                                            <td>{{dataList.gender}}</td>
+                                                                            <td>{{dataList.groupName}}</td>
+                                                                            <td>{{dataList.company}}</td>
+                                                                            <td>{{dataList.position}}</td>
+                                                                        </tr>
+
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+
+    <ng-template #sendMessageTemplate>
+        <article class="col-sm-12 col-md-12 no-padding">
+            <div sa-widget color="blue">
+                <header>
+                    <h2><strong>Send</strong> &nbsp; <i>mms</i></h2>
+                </header>
+                <div>
+                    <div class="widget-body no-padding">
+                        <textarea markdownEditor class="custom-scroll" rows="4" (change)="sendMessageData($event)"> write here ! </textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 padding-5 pull-right">
+                            <button class="btn btn-warning pull-right" (click)="sendMessage()"> send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </ng-template>
+
+</div>
