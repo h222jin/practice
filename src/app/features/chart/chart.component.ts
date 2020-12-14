@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {JsonApiService} from "@app/core/services";
 
 @Component({
   selector: 'ea-chart',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  constructor() { }
+  public chartjsData: any;
+
+  constructor( private jsonApiService: JsonApiService) { }
 
   ngOnInit() {
+    this.jsonApiService.fetch('//graphs/chartjs.json').subscribe((data) => {
+      this.chartjsData = data;
+    })
   }
 
 }

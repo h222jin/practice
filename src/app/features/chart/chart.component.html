@@ -1,3 +1,42 @@
-<p>
-  chart works!
-</p>
+<div id="content">
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['Statistics']" icon="signal"
+                            class="col-xc-12 col-sm-3 col-md-7 col-lg-4"></sa-big-breadcrumbs>
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div sa-widget [editbutton]="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-bar-chart-o"></i> </span>
+                        <h2>Visitor Statistics</h2>
+                    </header>
+
+                    <div>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="widget-body">
+                                <sa-chart-js type="line" [data]="chartjsData['line-chart']"></sa-chart-js>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="widget-body">
+                                <sa-chart-js type="doughnut" [data]="chartjsData['doughnut-chart']"></sa-chart-js>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="widget-body">
+                                <sa-chart-js type="doughnut" [data]="chartjsData['doughnut-chart']"></sa-chart-js>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
