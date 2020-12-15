@@ -5,6 +5,7 @@ import {SharedModule} from "@app/shared/shared.module";
 import {ChartJsModule} from "@app/shared/graphs/chart-js/chart-js.module";
 import {routing} from "@app/features/chart/chart.routing";
 import {SmartadminWidgetsModule} from "@app/shared/widgets/smartadmin-widgets.module";
+import {NgxDatatableModule} from "@swimlane/ngx-datatable";
 
 @NgModule({
     imports: [
@@ -12,7 +13,8 @@ import {SmartadminWidgetsModule} from "@app/shared/widgets/smartadmin-widgets.mo
         SharedModule,
         ChartJsModule,
         routing,
-        SmartadminWidgetsModule
+        SmartadminWidgetsModule,
+        NgxDatatableModule
     ],
     declarations: [ChartComponent]
 })

@@ -1,3 +1,4 @@
+
 export const presets = {
   line: {
     dataset:{
@@ -140,16 +141,16 @@ export const presets = {
     dataset:{},
     options:  {
       scales: {
-        xAxes: [{
-          gridLines:{
-            color: 'rgba(192,192,192,0.1)'
-          }
-        }],
-        yAxes: [{
-          gridLines:{
-            color: 'rgba(192,192,192,0.1)'
-          }
-        }]
+        // xAxes: [{
+        //   gridLines:{
+        //     color: 'rgba(192,192,192,0.1)'
+        //   }
+        // }],
+        // yAxes: [{
+        //   gridLines:{
+        //     color: 'rgba(192,192,192,0.1)'
+        //   }
+        // }]
       },
       legend: {
         display: false

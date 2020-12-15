@@ -8,9 +8,9 @@ declare var Chart:any;
 
   selector: 'sa-chart-js',
   template: `
-  <div>
-  <canvas></canvas>
-  </div>
+    <div>
+      <canvas></canvas>
+    </div>
   `,
   styles: []
 })
@@ -34,6 +34,7 @@ export class ChartJsComponent implements AfterContentInit {
   render(){
     let ctx = this.getCtx();
     let data = this.data;
+    console.log('chart-js component: ', data);
 
     if(data.datasets && data.datasets.length && presets[this.type] && presets[this.type].dataset){
       data.datasets =  data.datasets.map((it)=>{

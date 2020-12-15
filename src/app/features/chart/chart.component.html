@@ -13,28 +13,80 @@
                         <h2>Visitor Statistics</h2>
                     </header>
 
-                    <div>
-                        <div class="col-sm-4 col-md-4">
-                            <div class="widget-body">
-                                <sa-chart-js type="line" [data]="chartjsData['line-chart']"></sa-chart-js>
+
+                    <!-- 표 + 그래프 들어가는 구간-->
+                    <div class="widget-body">
+                        <div class="row" *ngIf="chartjsData">
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <sa-chart-js type="line" [data]=chartjsData></sa-chart-js>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-md-offset-0">
+                                <sa-chart-js type="bar" [data]="chartjsData"></sa-chart-js>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <sa-chart-js type="pie" [data]="pieData"></sa-chart-js>
+                                <br>
+                                <div class="col-md-4 col-md-offset-4 col-xs-6">월별 방문객 통계[단위: 명]</div>
                             </div>
                         </div>
 
-                        <div class="col-sm-4 col-md-4">
-                            <div class="widget-body">
-                                <sa-chart-js type="doughnut" [data]="chartjsData['doughnut-chart']"></sa-chart-js>
+                        <div class="widget-body">
+                            <div>
+                                <div class="row" style="padding: 8px 12px">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="icon-addon">
+                                                <input type="text" id="search" class="form-control"
+                                                       [(ngModel)]="controls.filter"
+                                                       placeholder='Type to filter the table...'
+                                                       (keyup)='updateFilter($event)'>
+                                                <label style="z-index: 22" for="search"
+                                                       class="fa fa-search"
+                                                       rel="tooltip" title="search"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="pull-right form-control " style="width: 70px;"
+                                                (ngModelChange)="updatePageSize($event)"
+                                                [(ngModel)]="controls.pageSize">
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding: 8px 12px;">
+                                    <ngx-datatable
+                                        #table
+                                        class="table-striped"
+                                        [rows]="rows"
+                                        [loadingIndicator]="loadingIndicator"
+                                        [columns]="columns"
+                                        [columnMode]="'force'"
+                                        [headerHeight]="40"
+                                        [footerHeight]="45"
+                                        [rowHeight]="'auto'"
+                                        [limit]="controls.pageSize"
+                                        [cssClasses]="{
+        sortAscending: 'fa fa-caret-up',
+        sortDescending: 'fa fa-caret-down',
+        pagerLeftArrow: 'fa  fa-angle-left',
+        pagerRightArrow: 'fa fa-angle-right',
+        pagerPrevious: 'fa fa-angle-double-left',
+        pagerNext: 'fa fa-angle-double-right'
+      }"
+                                        [reorderable]="reorderable">
+                                    </ngx-datatable>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-4 col-md-4">
-                            <div class="widget-body">
-                                <sa-chart-js type="doughnut" [data]="chartjsData['doughnut-chart']"></sa-chart-js>
-                            </div>
-                        </div>
-
                     </div>
-
-
                 </div>
             </article>
         </div>
