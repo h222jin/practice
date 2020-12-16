@@ -23,6 +23,7 @@ export class ChartComponent implements OnInit {
     labels = [];
     test = [];
     countData = [];
+    result = [];
     reorderable: boolean = true;
     loadingIndicator: boolean = true;
 
@@ -68,19 +69,19 @@ export class ChartComponent implements OnInit {
                 for (let i of this.temp) {
                     this.test.push(i.position)
                 }
-                console.log('test :: ', this.test);
-
                 // 각 포지션의 갯수 뽑아
                 this.countData = this.test.reduce((x, y, idx, arr) => {
                     x[y] = ++x[y] || 1;
                     return x
-                }, [])
+                }, {})
 
-                for (let i = 0; i < this.countData.length; i++) {
-                    console.log('i ::', i);
+                for (let item in this.countData) {
+                    this.result.push(item);
                 }
 
-                //this.pieData.labels = this.test;
+                console.log('result :: ',this.result);
+                console.log('countData :: ',this.countData);
+
                 this.pieData.datasets[0].data = this.countData;
                 this.pieData.labels = this.test;
                 console.log('결과 :: ', this.pieData);
