@@ -39,9 +39,12 @@
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <div class="icon-addon">
-                                                <input type="text" id="search" class="form-control"
+                                                <input type="text"
+                                                       id="search"
+                                                       class="form-control"
                                                        [(ngModel)]="controls.filter"
-                                                       placeholder='Type to filter the table...'
+                                                       placeholder="페이지 내 검색"
+                                                       (change)="updateFilter($event)"
                                                        (keyup)='updateFilter($event)'>
                                                 <label style="z-index: 22" for="search"
                                                        class="fa fa-search"

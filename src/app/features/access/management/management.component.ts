@@ -27,14 +27,14 @@ export class ManagementComponent implements OnInit {
   rows = [];
   temp = [];
   loadingIndicator: boolean = true;
-  companies = new Array();
-  companyList = new Array();
-  people = new Array();
-  genders = new Array();
-  groups = new Array();
-  groupList = new Array();
-  positions = new Array();
-  positionList = new Array();
+  companies = [];
+  companyList = [];
+  people = [];
+  genders = [];
+  groups = [];
+  groupList = [];
+  positions = [];
+  positionList = [];
   name: string;
   controls: any = {
     pageSize:  10,

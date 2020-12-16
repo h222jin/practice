@@ -86,7 +86,7 @@ export class SecondManagementComponent implements OnInit {
   }
 
   add() {
-    this.newData = new Array();
+    this.newData = [];
     this.newData.push(this.task, this.day);
     this.gatewayService.postTreeData(this.newData);
     console.log(this.newData);

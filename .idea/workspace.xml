@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/api/graphs/linechartData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/management/management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/management/management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.presets.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.presets.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/graphs/chartjs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/graphs/chartjs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/graphs/pieData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/graphs/pieData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/tables/datatables.standard.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/tables/datatables.standard.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +79,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,7 +155,8 @@
       <workItem from="1607658513058" duration="3736000" />
       <workItem from="1607680083422" duration="1940000" />
       <workItem from="1607918104233" duration="7655000" />
-      <workItem from="1608011815621" duration="10530000" />
+      <workItem from="1608011815621" duration="11363000" />
+      <workItem from="1608095147261" duration="15391000" />
     </task>
     <servers />
   </component>
@@ -204,39 +201,39 @@
     </state>
     <state x="1729" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605495141451" />
     <state x="289" y="338" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607668290365" />
-    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607579947822">
+    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608098996829">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1607579947822" />
-    <state width="1682" height="100" key="GridCell.Tab.0.bottom" timestamp="1608019210768">
+    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1608098996829" />
+    <state width="995" height="244" key="GridCell.Tab.0.bottom" timestamp="1608099308604">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1682" height="100" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1608019210768" />
-    <state width="1682" height="100" key="GridCell.Tab.0.center" timestamp="1608019210767">
+    <state width="995" height="244" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1608099308604" />
+    <state width="995" height="244" key="GridCell.Tab.0.center" timestamp="1608099308603">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1682" height="100" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1608019210767" />
-    <state width="1682" height="100" key="GridCell.Tab.0.left" timestamp="1608019210767">
+    <state width="995" height="244" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1608099308603" />
+    <state width="995" height="244" key="GridCell.Tab.0.left" timestamp="1608099308603">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1682" height="100" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1608019210767" />
-    <state width="1682" height="100" key="GridCell.Tab.0.right" timestamp="1608019210768">
+    <state width="995" height="244" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1608099308603" />
+    <state width="995" height="244" key="GridCell.Tab.0.right" timestamp="1608099308604">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1682" height="100" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1608019210768" />
+    <state width="995" height="244" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1608099308604" />
     <state x="560" y="345" key="Vcs.Push.Dialog.v2" timestamp="1607589354218">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="560" y="345" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1607589354218" />
-    <state x="259" y="322" width="1052" height="581" key="find.popup" timestamp="1607932551099">
+    <state x="259" y="322" width="1052" height="581" key="find.popup" timestamp="1608098241620">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
-    <state x="259" y="322" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1607932551099" />
+    <state x="259" y="322" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608098241620" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -245,10 +242,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="683" y="348" key="refactoring.ChangeSignatureDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607582044187" />
-    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1608023671743">
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1608098994374">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605578787305" />
-    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608023671743" />
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608098994374" />
   </component>
 </project>
