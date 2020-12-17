@@ -5,7 +5,7 @@
     </div>
 
     <div class="row">
-        <div class="row">
+        <div class="row" style="padding: 8px 12px;">
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div sa-widget [editbutton]="false">
                     <header>
@@ -15,39 +15,89 @@
 
 
                     <!-- 표 + 그래프 들어가는 구간-->
-                    <div class="widget-body">
-                        <div class="row" *ngIf="chartjsData">
+                    <div class="row">
+                        <div class="widget-body">
+                            <div class="row" *ngIf="chartjsData">
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                <sa-chart-js type="line" [data]=chartjsData></sa-chart-js>
-                            </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <sa-chart-js type="line" [data]=chartjsData></sa-chart-js>
+                                </div>
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-md-offset-0">
-                                <sa-chart-js type="bar" [data]="chartjsData"></sa-chart-js>
-                            </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-md-offset-0">
+                                    <sa-chart-js type="bar" [data]="chartjsData"></sa-chart-js>
+                                </div>
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                <sa-chart-js type="pie" [data]="pieData"></sa-chart-js>
-                                <br>
-                                <div class="col-md-4 col-md-offset-4 col-xs-6">월별 방문객 통계[단위: 명]</div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <sa-chart-js type="pie" [data]="pieData"></sa-chart-js>
+                                    <br>
+                                    <div class="col-md-5 col-md-offset-4">월별 방문객 통계[단위: 명]</div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row" style="padding: 8px 12px;">
+                            <div class="widget-body">
+                                <div class="row">
+                                    <br>
+                                    <div class="form-group">
+                                        <div class="col-md-2">
+                                            <select [(ngModel)]="searchOptions.position" #position name="position"
+                                                    (change)="searchSetting($event)"
+                                                    class="form-control input-sm">
+                                                <option value="" > position</option>
+                                                <option [value]="position"
+                                                        *ngFor="let position of positionList">{{position}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select [(ngModel)]="searchOptions.office"  name="office"
+                                                    (change)="searchSetting($event)"
+                                                    class="form-control input-sm">
+                                                <option value="" > office</option>
+                                                <option [value]="office"
+                                                        *ngFor="let office of officeList">{{office}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select [(ngModel)]="searchOptions.age"  name="age"
+                                                    (change)="searchSetting($event)"
+                                                    class="form-control input-sm">
+                                                <option value="" disabled> age</option>
+                                                <option [value]="age"
+                                                        *ngFor="let age of ageList">{{age}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select [(ngModel)]="searchOptions.salary"  name="salary"
+                                                    (change)="searchSetting($event)"
+                                                    class="form-control input-sm">
+                                                <option value="" disabled> salary</option>
+                                                <option [value]="salary"
+                                                        *ngFor="let salary of salaryList">{{salary}}</option>
+                                            </select>
+                                        </div>
 
-                        <div class="widget-body">
-                            <div>
-                                <div class="row" style="padding: 8px 12px">
+
+                                        <div class="form-group">
+                                            <a class="btn btn-info btn-sm" type="button" (click)="search()">
+                                                <i class="fa fa-search"></i> search
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+                                <div class="row" style="padding: 8px 2px;">
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <div class="icon-addon">
-                                                <input type="text"
-                                                       id="search"
-                                                       class="form-control"
+                                                <input type="text" id="search" class="form-control"
                                                        [(ngModel)]="controls.filter"
                                                        placeholder="페이지 내 검색"
-                                                       (change)="updateFilter($event)"
                                                        (keyup)='updateFilter($event)'>
-                                                <label style="z-index: 22" for="search"
-                                                       class="fa fa-search"
+                                                <label style="z-index: 22" for="search" class="fa fa-search"
                                                        rel="tooltip" title="search"></label>
                                             </div>
                                         </div>
@@ -63,6 +113,7 @@
                                         </select>
                                     </div>
                                 </div>
+
 
                                 <div class="row" style="padding: 8px 12px;">
                                     <ngx-datatable

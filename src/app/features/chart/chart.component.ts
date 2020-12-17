@@ -21,11 +21,38 @@ export class ChartComponent implements OnInit {
     rows = [];
     temp = [];
     labels = [];
-    test = [];
+
+
+    searchWord = [];
+
+    names = [];
+    positions = [];
+    offices = [];
+    ages = [];
+    dates = [];
+    salaries = [];
+
+    nameList = [];
+    positionList = [];
+    officeList = [];
+    ageList = [];
+    dateList = [];
+    salaryList = [];
+
+
     countData = [];
     result = [];
     reorderable: boolean = true;
     loadingIndicator: boolean = true;
+
+    public searchOptions = {
+        name: '',
+        position: '',
+        office: '',
+        age: '',
+        date: '',
+        salary: ''
+    }
 
     controls: any = {
         pageSize: 10,
@@ -60,39 +87,43 @@ export class ChartComponent implements OnInit {
 
         this.jsonApiService.fetch('/graphs/pieData.json').subscribe((data) => {
             this.pieData = data;
+        })
 
-            this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
-                // 인적사항 가져옴
-                this.temp = [...data];
+        this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
+            // 인적사항 가져옴
+            this.temp = [...data];
 
-                // for 돌면서 포지션 뽑아내
-                for (let i of this.temp) {
-                    this.test.push(i.position)
-                }
-                // 각 포지션의 갯수 뽑아
-                this.countData = this.test.reduce((x, y, idx, arr) => {
-                    x[y] = ++x[y] || 1;
-                    return x
-                }, {})
+            // 검색 옵셧 세팅
 
-                for (let item in this.countData) {
-                    this.result.push(item);
-                }
+            for (let row of this.temp) {
+                this.positions.push(row.position)
+                this.offices.push(row.office)
+                this.ages.push(row.age)
+                this.salaries.push(row.salary)
 
-                console.log('result :: ',this.result);
-                console.log('countData :: ',this.countData);
+            }
+            this.positionList = this.positions.filter(
+                (item, idx, array) => { return array.indexOf(item) == idx; }
+            )
+            this.officeList = this.offices.filter(
+                (item, idx, array) => { return array.indexOf(item) == idx; }
+            )
+            this.ageList = this.ages.filter(
+                (item, idx, array) => { return array.indexOf(item) == idx; }
+            )
+            this.salaryList = this.salaries.filter(
+                (item, idx, array) => { return array.indexOf(item) == idx; }
+            )
 
-                this.pieData.datasets[0].data = this.countData;
-                this.pieData.labels = this.test;
-                console.log('결과 :: ', this.pieData);
 
-            })
+            for (let item in this.countData) {
+                this.result.push(item);
+            }
 
-            // 최종으로 나왔으면 하는 형태
-            // { data : [ {"developter" : 46}, {...} ] }
-            // this.pieData.labels = this.test;
-            // this.pieData.datasets.data = this.countData;
-            // console.log('결과 :: ', this.pieData);
+            console.log('result :: ',this.result);
+            console.log('countData :: ',this.countData);
+
+
         })
 
     }
@@ -111,6 +142,26 @@ export class ChartComponent implements OnInit {
         // Whenever the filter changes, always go back to the first page
         this.table.offset = 0;
     }
+
+    searchSetting(event){
+        this.searchWord.push(event.target.value)
+        console.log(this.searchWord);
+    }
+
+    search() {
+        const val = this.searchWord;
+        const temp = this.temp.filter(function (d) {
+            console.log('val ::' , val);
+            return !val || ['name', 'position', 'office', 'age', 'date', 'salary'].some((field: any) => {
+                return d[field].indexOf(val) !== -1
+            })
+        });
+        this.rows = temp;
+        this.table.offset = 0;
+
+    }
+
+
 
 
     updatePageSize(value) {

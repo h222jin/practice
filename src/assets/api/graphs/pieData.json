@@ -1,14 +1,12 @@
 {
   "datasets":[{
-    "data":[],
+    "data":[18,49,27,35,39],
     "backgroundColor": [
       "rgba(220,220,220,0.8)",
       "rgba(151,187,205,1)",
       "rgba(169, 3, 41, 0.7)",
       "#949FB1",
-      "#4D5360",
-      "#F5A9BC",
-      "#F5D0A9"
+      "#4D5360"
     ],
     "hoverBackgroundColor": [
       "rgba(220,220,220,0.7)",
@@ -20,6 +18,11 @@
     "label":"My dataset"}],
 
 
-  "labels":[]
+  "labels":[
+    "Grey",
+    "Blue",
+    "Red",
+    "Grey",
+    "Dark Grey"
+  ]
 }
-
