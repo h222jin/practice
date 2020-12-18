@@ -39,15 +39,15 @@
                                 <div class="row">
                                     <br>
                                     <div class="form-group">
-                                        <div class="col-md-2">
-                                            <select [(ngModel)]="searchOptions.position" #position name="position"
-                                                    (change)="searchSetting($event)"
-                                                    class="form-control input-sm">
-                                                <option value="" > position</option>
-                                                <option [value]="position"
-                                                        *ngFor="let position of positionList">{{position}}</option>
-                                            </select>
-                                        </div>
+<!--                                        <div class="col-md-2">-->
+<!--                                            <select [(ngModel)]="searchOptions.position" #position name="position"-->
+<!--                                                    (change)="searchSetting($event)"-->
+<!--                                                    class="form-control input-sm">-->
+<!--                                                <option value="" > position</option>-->
+<!--                                                <option [value]="position"-->
+<!--                                                        *ngFor="let position of positionList">{{position}}</option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
                                         <div class="col-md-2">
                                             <select [(ngModel)]="searchOptions.office"  name="office"
                                                     (change)="searchSetting($event)"
@@ -57,24 +57,24 @@
                                                         *ngFor="let office of officeList">{{office}}</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-2">
-                                            <select [(ngModel)]="searchOptions.age"  name="age"
-                                                    (change)="searchSetting($event)"
-                                                    class="form-control input-sm">
-                                                <option value="" disabled> age</option>
-                                                <option [value]="age"
-                                                        *ngFor="let age of ageList">{{age}}</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <select [(ngModel)]="searchOptions.salary"  name="salary"
-                                                    (change)="searchSetting($event)"
-                                                    class="form-control input-sm">
-                                                <option value="" disabled> salary</option>
-                                                <option [value]="salary"
-                                                        *ngFor="let salary of salaryList">{{salary}}</option>
-                                            </select>
-                                        </div>
+<!--                                        <div class="col-md-2">-->
+<!--                                            <select [(ngModel)]="searchOptions.age"  name="age"-->
+<!--                                                    (change)="searchSetting($event)"-->
+<!--                                                    class="form-control input-sm">-->
+<!--                                                <option value="" disabled> age</option>-->
+<!--                                                <option [value]="age"-->
+<!--                                                        *ngFor="let age of ageList">{{age}}</option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-2">-->
+<!--                                            <select [(ngModel)]="searchOptions.salary"  name="salary"-->
+<!--                                                    (change)="searchSetting($event)"-->
+<!--                                                    class="form-control input-sm">-->
+<!--                                                <option value="" disabled> salary</option>-->
+<!--                                                <option [value]="salary"-->
+<!--                                                        *ngFor="let salary of salaryList">{{salary}}</option>-->
+<!--                                            </select>-->
+<!--                                        </div>-->
 
 
                                         <div class="form-group">

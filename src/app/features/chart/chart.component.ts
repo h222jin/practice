@@ -25,6 +25,7 @@ export class ChartComponent implements OnInit {
 
 
     searchWord = [];
+    searchCate = [];
 
     names = [];
     positions = [];
@@ -103,30 +104,73 @@ export class ChartComponent implements OnInit {
                 this.salaries.push(row.salary)
 
             }
-            this.positionList = this.positions.filter(
-                (item, idx, array) => { return array.indexOf(item) == idx; }
-            )
+            // this.positionList = this.positions.filter(
+            //     (item, idx, array) => { return array.indexOf(item) == idx; }
+            // )
+            // this.positionList.sort();
             this.officeList = this.offices.filter(
                 (item, idx, array) => { return array.indexOf(item) == idx; }
             )
-            this.ageList = this.ages.filter(
-                (item, idx, array) => { return array.indexOf(item) == idx; }
-            )
-            this.salaryList = this.salaries.filter(
-                (item, idx, array) => { return array.indexOf(item) == idx; }
-            )
+            this.officeList.sort();
+            // this.ageList = this.ages.filter(
+            //     (item, idx, array) => { return array.indexOf(item) == idx; }
+            // )
+            // this.ageList.sort();
+            // this.salaryList = this.salaries.filter(
+            //     (item, idx, array) => { return array.indexOf(item) == idx; }
+            // )
+            // this.salaryList.sort();
 
 
-            for (let item in this.countData) {
-                this.result.push(item);
-            }
-
-            console.log('result :: ',this.result);
-            console.log('countData :: ',this.countData);
+            // for (let item in this.countData) {
+            //     this.result.push(item);
+            // }
+            //
+            // console.log('result :: ',this.result);
+            // console.log('countData :: ',this.countData);
 
 
         })
 
+    }
+
+
+
+    searchSetting(event){
+        if( this.searchWord.length == 0) {
+            this.searchWord = event.target.value
+            console.log('1st if :: ', this.searchWord)
+        } else {
+            this.searchWord = event.target.value
+            console.log('2st if :: ', this.searchWord)
+        }
+
+        console.log(this.searchWord);
+
+    }
+
+    search() {
+        console.log('filter 돌리기 전 : ', this.temp);
+        const val = this.searchWord;
+        console.log('serchword : ', this.searchWord);
+        const temp = this.temp.filter( it => it.office.includes(val));
+        console.log('최종 결과 :: ', temp);
+        this.rows = temp;
+        this.table.offset = 0;
+
+    }
+
+    updatePageSize(value) {
+
+        // if (!this.controls.filter) {
+        //     // update the rows
+        //     this.rows = [...this.temp];
+        //     // Whenever the filter changes, always go back to the first page
+        // }
+
+        this.controls.pageSize = parseInt(value)
+        this.table.limit = this.controls.pageSize;
+        window.dispatchEvent(new Event('resize'));
     }
 
     updateFilter(event) {
@@ -142,43 +186,6 @@ export class ChartComponent implements OnInit {
         this.rows = temp;
         // Whenever the filter changes, always go back to the first page
         this.table.offset = 0;
-    }
-
-    searchSetting(event){
-        if( this.searchWord.length == 0) {
-            this.searchWord = event.target.value
-        } else {
-            this.searchWord = event.target.value
-        }
-
-        console.log(this.searchWord);
-
-    }
-
-    search() {
-        const val = this.searchWord;
-        const temp = this.temp.filter( it => it.office.includes(val));
-        this.rows = temp;
-        this.table.offset = 0;
-    }
-
-
-
-
-    updatePageSize(value) {
-
-        // if (!this.controls.filter) {
-        //     // update the rows
-        //     this.rows = [...this.temp];
-        //     // Whenever the filter changes, always go back to the first page
-        // }
-
-        this.controls.pageSize = parseInt(value)
-
-        this.table.limit = this.controls.pageSize;
-
-        window.dispatchEvent(new Event('resize'));
-
     }
 
 }
