@@ -3,6 +3,7 @@ import {JsonApiService} from "@app/core/services";
 import {DatatableComponent} from "@swimlane/ngx-datatable";
 import {isJsObject} from "@angular/core/src/change_detection/change_detection_util";
 import {count} from "rxjs/operators";
+import {enableBindings} from "@angular/core/src/render3";
 
 @Component({
     selector: 'ea-chart',
@@ -144,21 +145,21 @@ export class ChartComponent implements OnInit {
     }
 
     searchSetting(event){
-        this.searchWord.push(event.target.value)
+        if( this.searchWord.length == 0) {
+            this.searchWord = event.target.value
+        } else {
+            this.searchWord = event.target.value
+        }
+
         console.log(this.searchWord);
+
     }
 
     search() {
         const val = this.searchWord;
-        const temp = this.temp.filter(function (d) {
-            console.log('val ::' , val);
-            return !val || ['name', 'position', 'office', 'age', 'date', 'salary'].some((field: any) => {
-                return d[field].indexOf(val) !== -1
-            })
-        });
+        const temp = this.temp.filter( it => it.office.includes(val));
         this.rows = temp;
         this.table.offset = 0;
-
     }
 
 
@@ -166,12 +167,11 @@ export class ChartComponent implements OnInit {
 
     updatePageSize(value) {
 
-        if (!this.controls.filter) {
-            // update the rows
-            this.rows = [...this.temp];
-            // Whenever the filter changes, always go back to the first page
-            this.table.offset = 0;
-        }
+        // if (!this.controls.filter) {
+        //     // update the rows
+        //     this.rows = [...this.temp];
+        //     // Whenever the filter changes, always go back to the first page
+        // }
 
         this.controls.pageSize = parseInt(value)
 
