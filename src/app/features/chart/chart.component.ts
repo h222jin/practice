@@ -15,7 +15,6 @@ export class ChartComponent implements OnInit {
 
     @ViewChild(DatatableComponent) table: DatatableComponent;
 
-
     public chartjsData: any;
     public pieData: any;
 
@@ -23,37 +22,18 @@ export class ChartComponent implements OnInit {
     temp = [];
     labels = [];
 
-
     searchWord = [];
     searchCate = [];
 
     names = [];
-    positions = [];
     offices = [];
-    ages = [];
-    dates = [];
-    salaries = [];
-
-    nameList = [];
-    positionList = [];
     officeList = [];
-    ageList = [];
-    dateList = [];
-    salaryList = [];
 
-
-    countData = [];
-    result = [];
     reorderable: boolean = true;
     loadingIndicator: boolean = true;
 
     public searchOptions = {
-        name: '',
-        position: '',
         office: '',
-        age: '',
-        date: '',
-        salary: ''
     }
 
     controls: any = {
@@ -89,6 +69,9 @@ export class ChartComponent implements OnInit {
 
         this.jsonApiService.fetch('/graphs/pieData.json').subscribe((data) => {
             this.pieData = data;
+
+            console.log(this.officeList);
+            console.log('labels : ', this.pieData.labels);
         })
 
         this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
@@ -98,10 +81,10 @@ export class ChartComponent implements OnInit {
             // 검색 옵셧 세팅
 
             for (let row of this.temp) {
-                this.positions.push(row.position)
+                //this.positions.push(row.position)
                 this.offices.push(row.office)
-                this.ages.push(row.age)
-                this.salaries.push(row.salary)
+                //this.ages.push(row.age)
+                //this.salaries.push(row.salary)
 
             }
             // this.positionList = this.positions.filter(
@@ -112,6 +95,29 @@ export class ChartComponent implements OnInit {
                 (item, idx, array) => { return array.indexOf(item) == idx; }
             )
             this.officeList.sort();
+
+            // 지역명 파이데이터의 라벨로 지정
+            this.pieData.labels = this.officeList;
+
+
+
+            // let countArray = [];
+            // let uniqueNames = {};
+            // console.log('length', this.temp.length);
+            // for (let i=0; i<this.temp.length; i++ ) {
+            //     if (!uniqueNames[this.temp[i].office]) {
+            //         countArray.push(this.temp[i])
+            //         console.log('countArray :: ', countArray);
+            //     }
+            //     uniqueNames[this.temp[i].office] = ((uniqueNames[this.temp[i].office] || 0) + 1);
+            // }
+            // for (let j=0; j<countArray.length; j++) {
+            //     countArray[j].times = uniqueNames[countArray[j].office];
+            // }
+            // console.log('과연?>>>???/  ',countArray);
+
+
+
             // this.ageList = this.ages.filter(
             //     (item, idx, array) => { return array.indexOf(item) == idx; }
             // )

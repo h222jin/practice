@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/graphs/pieData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/graphs/pieData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +144,7 @@
       <workItem from="1608011815621" duration="11363000" />
       <workItem from="1608095147261" duration="17701000" />
       <workItem from="1608182265965" duration="12514000" />
-      <workItem from="1608265498772" duration="12296000" />
+      <workItem from="1608265498772" duration="15259000" />
     </task>
     <servers />
   </component>
@@ -216,11 +217,11 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="560" y="345" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1607589354218" />
-    <state x="259" y="322" width="1052" height="581" key="find.popup" timestamp="1608098241620">
+    <state x="259" y="322" width="1052" height="581" key="find.popup" timestamp="1608284729363">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
-    <state x="259" y="322" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608098241620" />
+    <state x="259" y="322" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608284729363" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
