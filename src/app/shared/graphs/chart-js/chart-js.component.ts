@@ -48,6 +48,12 @@ export class ChartJsComponent implements AfterContentInit {
                 data: data,
                 options: presets[this.type] ? presets[this.type].options : {}
             })
+        } else if (this.type == 'member_chart2') {
+            this.chart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: presets[this.type] ? presets[this.type].options : {}
+            })
         } else {
             this.chart = new Chart(ctx, {
                 type: this.type,

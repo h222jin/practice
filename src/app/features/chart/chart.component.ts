@@ -8,7 +8,7 @@ import {enableBindings} from "@angular/core/src/render3";
 @Component({
     selector: 'ea-chart',
     templateUrl: './chart.component.html',
-    styleUrls: ['./chart.component.css'],
+    styleUrls: ['./chart.component.css','../../shared/ngx-datatable-css/smartadmin-ngx-datatable.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class ChartComponent implements OnInit {
@@ -16,8 +16,8 @@ export class ChartComponent implements OnInit {
     @ViewChild(DatatableComponent) table: DatatableComponent;
 
     public chartjsData: any;
-    public pieData: any;
     public pie_chart1: any;
+    public pie_chart2: any;
 
     rows = [];
     temp = [];
@@ -29,6 +29,9 @@ export class ChartComponent implements OnInit {
     names = [];
     offices = [];
     officeList = [];
+    ages = [];
+    ageList = [];
+    ageCount = [];
 
 
     reorderable: boolean = true;
@@ -54,6 +57,8 @@ export class ChartComponent implements OnInit {
     ];
 
     countData: any[];
+    loadingIndicatorForV: boolean = true;
+    reorderableForV: boolean = true;
 
     constructor(private jsonApiService: JsonApiService) {
     }
@@ -73,16 +78,28 @@ export class ChartComponent implements OnInit {
 
         this.jsonApiService.fetch('/graphs/pieData.json').subscribe((data) => {
             this.pie_chart1 = data;
+            this.pie_chart2 = data;
 
         })
+        this.jsonApiService.fetch('/graphs/doughnutData.json').subscribe((data) => {
+            this.pie_chart2 = data;
+        })
+
+
 
         this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
             this.temp = [...data];
 
             for (let row of this.temp) {
                 this.offices.push(row.office)
+                this.ages.push(row.age)
             }
             this.officeList = this.offices.filter(
+                (item, idx, array) => { return array.indexOf(item) == idx; }
+            )
+            this.officeList.sort();
+
+            this.ageList = this.ages.filter(
                 (item, idx, array) => { return array.indexOf(item) == idx; }
             )
             this.officeList.sort();
@@ -91,6 +108,18 @@ export class ChartComponent implements OnInit {
                 acc.set(cur, (acc.get(cur) || 0 ) + 1);
                 return acc
             } , new Map ());
+
+            this.ageCount = this.ages.reduce( (acc, cur) => {
+                acc.set(cur, (acc.get(cur) || 0 ) + 1);
+                return acc
+            } , new Map ());
+
+            for ( let [key, value] of this.ageCount.entries()) {
+                console.log('key: ', key , 'value : ', value);
+                this.pie_chart2.datasets[0].data.push(value)
+                this.pie_chart2.labels.push(key)
+            }
+
 
             for ( let [key, value] of this.countData.entries()) {
                 console.log('key: ', key , 'value : ', value);

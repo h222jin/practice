@@ -19,19 +19,18 @@
                         <div class="widget-body">
                             <div class="row" *ngIf="chartjsData">
 
-                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <sa-chart-js type="line" [data]=chartjsData></sa-chart-js>
-                                </div>
+                                </article>
 
                                 <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                     <sa-chart-js type="member_chart1" [data]="pie_chart1"></sa-chart-js>
                                 </article>
 
-<!--                                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">-->
-<!--                                    <sa-chart-js type="pie" [data]="pieData"></sa-chart-js>-->
-<!--                                    <br>-->
-<!--                                    <article class="col-md-6 col-md-offset-3">지역별 직원 구성도 [단위: 명]</article>-->
-<!--                                </article>-->
+                                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <sa-chart-js type="member_chart2" [data]="pie_chart2"></sa-chart-js>
+                                </article>
+
                             </div>
                         </div>
                         <div class="row" style="padding: 8px 12px;">
@@ -120,7 +119,7 @@
                                         #table
                                         class="table-striped"
                                         [rows]="rows"
-                                        [loadingIndicator]="loadingIndicator"
+                                        [loadingIndicator]="loadingIndicatorForV"
                                         [columns]="columns"
                                         [columnMode]="'force'"
                                         [headerHeight]="40"
@@ -128,14 +127,14 @@
                                         [rowHeight]="'auto'"
                                         [limit]="controls.pageSize"
                                         [cssClasses]="{
-        sortAscending: 'fa fa-caret-up',
-        sortDescending: 'fa fa-caret-down',
-        pagerLeftArrow: 'fa  fa-angle-left',
-        pagerRightArrow: 'fa fa-angle-right',
-        pagerPrevious: 'fa fa-angle-double-left',
-        pagerNext: 'fa fa-angle-double-right'
-      }"
-                                        [reorderable]="reorderable">
+                          sortAscending: 'fa fa-caret-up',
+                          sortDescending: 'fa fa-caret-down',
+                          pagerLeftArrow: 'fa  fa-angle-left',
+                          pagerRightArrow: 'fa fa-angle-right',
+                          pagerPrevious: 'fa fa-angle-double-left',
+                          pagerNext: 'fa fa-angle-double-right'
+                        }"
+                                        [reorderable]="reorderableForV">
                                     </ngx-datatable>
                                 </div>
                             </div>
