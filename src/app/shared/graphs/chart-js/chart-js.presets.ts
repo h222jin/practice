@@ -157,5 +157,43 @@ export const presets = {
       },
       responsive: true
     }
+  },
+  member_chart1: {
+    dataset:{},
+    options:  {
+      scales: {
+        xAxes: [{
+          gridLines:{
+            color: 'rgba(192,192,192,0.1)'
+          },
+          display: false,
+          scaleLabel: {
+            show: false
+          }
+        }],
+        yAxes: [{
+          gridLines:{
+            color: 'rgba(192,192,192,0.1)'
+          },
+          display: false
+        }]
+      },
+      legend: {
+        display: true,
+        labels : {
+          boxWidth: 20
+        }
+      },
+      responsive: true
+      ,
+      title: {
+        display: true,
+        text: "[구성원 통계]",
+        position : 'bottom',
+        fontSize : 13,
+        fontStyle: 'normal',
+        fontColor: 'black'
+      }
+    }
   }
 };

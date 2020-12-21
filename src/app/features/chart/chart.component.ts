@@ -17,6 +17,7 @@ export class ChartComponent implements OnInit {
 
     public chartjsData: any;
     public pieData: any;
+    public pie_chart1: any;
 
     rows = [];
     temp = [];
@@ -28,6 +29,7 @@ export class ChartComponent implements OnInit {
     names = [];
     offices = [];
     officeList = [];
+
 
     reorderable: boolean = true;
     loadingIndicator: boolean = true;
@@ -51,6 +53,8 @@ export class ChartComponent implements OnInit {
 
     ];
 
+    countData: any[];
+
     constructor(private jsonApiService: JsonApiService) {
     }
 
@@ -68,72 +72,32 @@ export class ChartComponent implements OnInit {
         })
 
         this.jsonApiService.fetch('/graphs/pieData.json').subscribe((data) => {
-            this.pieData = data;
+            this.pie_chart1 = data;
 
-            console.log(this.officeList);
-            console.log('labels : ', this.pieData.labels);
         })
 
         this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
-            // 인적사항 가져옴
             this.temp = [...data];
 
-            // 검색 옵셧 세팅
-
             for (let row of this.temp) {
-                //this.positions.push(row.position)
                 this.offices.push(row.office)
-                //this.ages.push(row.age)
-                //this.salaries.push(row.salary)
-
             }
-            // this.positionList = this.positions.filter(
-            //     (item, idx, array) => { return array.indexOf(item) == idx; }
-            // )
-            // this.positionList.sort();
             this.officeList = this.offices.filter(
                 (item, idx, array) => { return array.indexOf(item) == idx; }
             )
             this.officeList.sort();
 
-            // 지역명 파이데이터의 라벨로 지정
-            this.pieData.labels = this.officeList;
+            this.countData = this.offices.reduce( (acc, cur) => {
+                acc.set(cur, (acc.get(cur) || 0 ) + 1);
+                return acc
+            } , new Map ());
 
+            for ( let [key, value] of this.countData.entries()) {
+                console.log('key: ', key , 'value : ', value);
+                this.pie_chart1.datasets[0].data.push(value)
+                this.pie_chart1.labels.push(key)
+            }
 
-
-            // let countArray = [];
-            // let uniqueNames = {};
-            // console.log('length', this.temp.length);
-            // for (let i=0; i<this.temp.length; i++ ) {
-            //     if (!uniqueNames[this.temp[i].office]) {
-            //         countArray.push(this.temp[i])
-            //         console.log('countArray :: ', countArray);
-            //     }
-            //     uniqueNames[this.temp[i].office] = ((uniqueNames[this.temp[i].office] || 0) + 1);
-            // }
-            // for (let j=0; j<countArray.length; j++) {
-            //     countArray[j].times = uniqueNames[countArray[j].office];
-            // }
-            // console.log('과연?>>>???/  ',countArray);
-
-
-
-            // this.ageList = this.ages.filter(
-            //     (item, idx, array) => { return array.indexOf(item) == idx; }
-            // )
-            // this.ageList.sort();
-            // this.salaryList = this.salaries.filter(
-            //     (item, idx, array) => { return array.indexOf(item) == idx; }
-            // )
-            // this.salaryList.sort();
-
-
-            // for (let item in this.countData) {
-            //     this.result.push(item);
-            // }
-            //
-            // console.log('result :: ',this.result);
-            // console.log('countData :: ',this.countData);
 
 
         })
