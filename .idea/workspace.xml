@@ -20,15 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.presets.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/graphs/chart-js/chart-js.presets.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/ngx-datatable-css/smartadmin-ngx-datatable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/ngx-datatable-css/smartadmin-ngx-datatable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/graphs/doughnutData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/graphs/doughnutData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/graphs/pieData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/graphs/pieData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/tables/datatables.filters.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/tables/datatables.filters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/management/management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/management/management.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/management/management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/management/management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/register/register.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/register/register.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/layout/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/layout/navigation/navigation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/ui/datatable/datatable.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/ui/datatable/datatable.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/10cm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/cheeze.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/donghwan.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/dongmin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/jihyoung.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/kayclef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/meno.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/minseok.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/parkmoonchi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/sejin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/stella.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/taewook.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/wonseok.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/yoonju.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/youil.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/project-list.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/meeting-room.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +185,11 @@
       <workItem from="1608182265965" duration="12514000" />
       <workItem from="1608265498772" duration="15307000" />
       <workItem from="1608519195757" duration="5178000" />
-      <workItem from="1608528918798" duration="4256000" />
+      <workItem from="1608528918798" duration="4328000" />
+      <workItem from="1608540183726" duration="26000" />
+      <workItem from="1608611651068" duration="5000" />
+      <workItem from="1608707265058" duration="8442000" />
+      <workItem from="1608783789738" duration="10826000" />
     </task>
     <servers />
   </component>
@@ -194,11 +219,11 @@
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084616516" />
     <state x="1685" y="144" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605493706974" />
     <state x="245" y="160" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1606875520340" />
-    <state x="673" y="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607571301132">
+    <state x="673" y="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608795671806">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="2113" y="351" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605520273521" />
-    <state x="673" y="390" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1607571301132" />
+    <state x="673" y="390" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1608795671806" />
     <state x="773" y="304" key="#com.intellij.ide.util.MemberChooser" timestamp="1607580800251">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -213,35 +238,35 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1608098996829" />
-    <state width="1648" height="218" key="GridCell.Tab.0.bottom" timestamp="1608534075331">
+    <state width="1878" height="364" key="GridCell.Tab.0.bottom" timestamp="1608795500570">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1648" height="218" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1608534075331" />
-    <state width="1648" height="218" key="GridCell.Tab.0.center" timestamp="1608534075331">
+    <state width="1878" height="364" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500570" />
+    <state width="1878" height="364" key="GridCell.Tab.0.center" timestamp="1608795500569">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1648" height="218" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1608534075331" />
-    <state width="1648" height="218" key="GridCell.Tab.0.left" timestamp="1608534075330">
+    <state width="1878" height="364" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500569" />
+    <state width="1878" height="364" key="GridCell.Tab.0.left" timestamp="1608795500569">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1648" height="218" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1608534075330" />
-    <state width="1648" height="218" key="GridCell.Tab.0.right" timestamp="1608534075331">
+    <state width="1878" height="364" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500569" />
+    <state width="1878" height="364" key="GridCell.Tab.0.right" timestamp="1608795500570">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1648" height="218" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1608534075331" />
+    <state width="1878" height="364" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500570" />
     <state x="560" y="345" key="Vcs.Push.Dialog.v2" timestamp="1607589354218">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="560" y="345" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1607589354218" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1608533079045">
+    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1608801040885">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608533079045" />
+    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608801040885" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -250,10 +275,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="683" y="348" key="refactoring.ChangeSignatureDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607582044187" />
-    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1608519317215">
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1608712966036">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605578787305" />
-    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608519317215" />
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608712966036" />
   </component>
 </project>

@@ -74,6 +74,7 @@ export class SecondManagementComponent implements OnInit {
     this.jsonApiService.fetch('/ui-examples/tree-view.json').subscribe(data => {
       this.demo1 = data.demo1;
       this.demo2 = data.demo2;
+
     })
 
     // this.gatewayService.getTreeData()
@@ -86,14 +87,13 @@ export class SecondManagementComponent implements OnInit {
   }
 
   add() {
-    this.newData = [];
-    this.newData.push(this.task, this.day);
+
     this.gatewayService.postTreeData(this.newData);
     console.log(this.newData);
   }
 
-  changeLstener(payload) {
-    console.log('change payload', payload)
+  changeListener(event) {
+    console.log(event.target.value)
   }
 
 

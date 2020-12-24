@@ -7,6 +7,7 @@ import {numericIndexGetter} from "@swimlane/ngx-datatable/release/utils";
 import {GatewayService} from "@app/features/_service/gateway.service";
 import {subscribeOn} from "rxjs/operators";
 
+
 @Component({
   selector: 'ea-management',
   templateUrl: './management.component.html',
@@ -15,6 +16,10 @@ import {subscribeOn} from "rxjs/operators";
 })
 
 export class ManagementComponent implements OnInit {
+
+  aWeekAgo = "2020/12/16"
+  today = "2020/12/16"
+
 
   public searchOptions = {
     name: '',
@@ -44,6 +49,7 @@ export class ManagementComponent implements OnInit {
   @ViewChild(DatatableComponent) table: DatatableComponent;
   @ViewChild(DatatableComponent) tableForV: DatatableComponent;
   @ViewChild('sendMessageTemplate') sendMessageTemplate;
+
   modalRef: BsModalRef;
   private messageData: any;
 
@@ -70,10 +76,10 @@ export class ManagementComponent implements OnInit {
       console.log(this.rows);
 
       for (let row of this.rows) {
-          this.companies.push(row.company);
-          this.people.push(row.gender);
-          this.groups.push(row.groupName);
-          this.positions.push(row.position);
+        this.companies.push(row.company);
+        this.people.push(row.gender);
+        this.groups.push(row.groupName);
+        this.positions.push(row.position);
       }
       this.companyList = this.companies.filter(
           (item, idx, array) => { return array.indexOf( item ) == idx; }
@@ -109,6 +115,7 @@ export class ManagementComponent implements OnInit {
   //   this.table.offset = 0;
   // }
 
+
   sendMessageData($event) {
     this.messageData = $event.target.value;
   }
@@ -122,7 +129,11 @@ export class ManagementComponent implements OnInit {
 
   }
 
-}
+  getInterfaceRecord(startDate, endDate) {
+    this.aWeekAgo = startDate;
+    this.today = endDate;
 
+  }
+}
 
 

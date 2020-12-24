@@ -10,10 +10,10 @@
     </div>
 
     <!--    검색 바 들어가는 자리-->
-    <div class="row">
+    <div class="row" style="padding: 8px 12px;">
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="widget-body no-padding">
-                <div class="widget-body-toolbar">
+                <div>
                     <div class="form-inline">
                         <div class="row">
                             <br>
@@ -94,97 +94,216 @@
                             <!--                            </div>-->
                         </div>
                         <br>
-
-                        <!--표 들어가는 자리-->
-                        <div class="row">
-                            <div class="form-inline">
-                                <div class="no-padding">
-                                    <div class="row" style="padding: 8px 12px">
-                                        <article class="col-sm-12 ">
-                                            <div class="row">
-                                                <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <div sa-widget [editbutton]="false">
-                                                        <header>
-                                                            <span class="widget-icon"> <i
-                                                                    class="fa fa-table"></i> </span>
-
-                                                            <h2> member table </h2>
-                                                        </header>
-                                                        <div>
-                                                            <div class="widget-body no-padding">
-                                                                <div class="table-responsive">
-                                                                    <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th>
-                                                                                <label>
-                                                                                    <input type="checkbox"
-                                                                                           name="checkbox-inline">
-                                                                                    <i></i>
-                                                                                </label>
-                                                                            </th>
-                                                                            <th class="text-align-center">이름</th>
-                                                                            <th class="text-align-center">성별</th>
-                                                                            <th class="text-align-center">그룹</th>
-                                                                            <th class="text-align-center">회사</th>
-                                                                            <th class="text-align-center">포지션</th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr *ngFor="let dataList of rows">
-                                                                            <td>
-                                                                                <label>
-                                                                                    <input type="checkbox"
-                                                                                           name="checkbox-inline">
-                                                                                    <i></i>
-                                                                                </label>
-                                                                            </td>
-                                                                            <td>{{dataList.name}}</td>
-                                                                            <td>{{dataList.gender}}</td>
-                                                                            <td>{{dataList.groupName}}</td>
-                                                                            <td>{{dataList.company}}</td>
-                                                                            <td>{{dataList.position}}</td>
-                                                                        </tr>
-
-                                                                        </tbody>
-                                                                    </table>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </article>
     </div>
 
-
-    <ng-template #sendMessageTemplate>
-        <article class="col-sm-12 col-md-12 no-padding">
-            <div sa-widget color="blue">
-                <header>
-                    <h2><strong>Send</strong> &nbsp; <i>mms</i></h2>
-                </header>
+    <!--표 들어가는 자리-->
+    <div class="row" style="padding: 8px 12px;">
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="widget-body">
                 <div>
-                    <div class="widget-body no-padding">
-                        <textarea markdownEditor class="custom-scroll" rows="4" (change)="sendMessageData($event)"> write here ! </textarea>
+                    <div class="form-inline">
+                        <div class="row">
+                            <div sa-widget [editbutton]="false">
+                                <header>
+                                                            <span class="widget-icon"> <i
+                                                                    class="fa fa-table"></i> </span>
+
+                                    <h2> member table </h2>
+                                </header>
+                                <div>
+                                    <div class="widget-body no-padding">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        <label>
+                                                            <input type="checkbox"
+                                                                   name="checkbox-inline">
+                                                            <i></i>
+                                                        </label>
+                                                    </th>
+                                                    <th class="text-align-center">이름</th>
+                                                    <th class="text-align-center">성별</th>
+                                                    <th class="text-align-center">그룹</th>
+                                                    <th class="text-align-center">회사</th>
+                                                    <th class="text-align-center">포지션</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr *ngFor="let dataList of rows">
+                                                    <td>
+                                                        <label>
+                                                            <input type="checkbox"
+                                                                   name="checkbox-inline">
+                                                            <i></i>
+                                                        </label>
+                                                    </td>
+                                                    <td>{{dataList.name}}</td>
+                                                    <td>{{dataList.gender}}</td>
+                                                    <td>{{dataList.groupName}}</td>
+                                                    <td>{{dataList.company}}</td>
+                                                    <td>{{dataList.position}}</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 padding-5 pull-right">
-                            <button class="btn btn-warning pull-right" (click)="sendMessage()"> send</button>
+
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!--표 끝나는 자리-->
+
+
+<!-- 새로 표 들어가는 자리 -->
+<div class="row" style="padding: 8px 12px;">
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="widget-body">
+            <div>
+                <div class="form-inline">
+                    <div class="row" style="padding: 8px 12px;">
+                        <div sa-widget [colorbutton]="false" [editbutton]="false" [togglebutton]="true"
+                             [fullscreenbutton]="true" [deletebutton]="false" [sortable]="false">
+                            <header>
+                                <span class="widget-icon"> <i class="fa fa-connectdevelop"></i> </span>
+                                <h2>일별 연동 개수</h2>
+                            </header>
+                            <div>
+                                <div class="widget-body">
+                                    <div class="widget-body-toolbar">
+                                        <div class="row">
+                                            <div class="col-sm-offset-2 col-sm-3">
+                                                <div class="input-group">
+                                                    <input class="form-control" id="from" [saUiDatepicker]="{
+                                    dateFormat: 'yy/mm/dd',
+                                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                                    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                    minRestrict: '#to'
+                                 }"
+                                                           type="text" placeholder="Select a start date"
+                                                           [value]="aWeekAgo" #startDate autocomplete="off">
+                                                    <span class="input-group-addon"><i
+                                                            class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="input-group">
+                                                    <input class="form-control" id="to" [saUiDatepicker]="{
+                                    dateFormat: 'yy/mm/dd',
+                                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                                    monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                                    maxRestrict: '#from'
+                                 }"
+                                                           type="text" placeholder="Select a end date"
+                                                           [value]="today" #endDate autocomplete="off">
+                                                    <span class="input-group-addon"><i
+                                                            class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="btn-group">
+                                                    <a (click)="getInterfaceRecord(startDate.value, endDate.value)"
+                                                       class="btn btn-sm btn-default"> <i class="fa fa-search"></i>
+                                                        검색 </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover text-center">
+                                            <thead>
+                                            <tr>
+                                                <th class="text-center" rowspan="2" style="vertical-align: middle;">
+                                                    날짜
+                                                </th>
+                                                <th class="text-center" colspan="3">HR(Employee)</th>
+                                                <th class="text-center" colspan="3">HR(Card)</th>
+                                                <th class="text-center" colspan="2">카드 출입</th>
+                                                <th class="text-center" colspan="3">회의실</th>
+                                                <th class="text-center" colspan="1">MMS</th>
+                                                <th class="text-center" colspan="3">얼굴 출입(건물출입)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center">추가</th>
+                                                <th class="text-center">변경</th>
+                                                <th class="text-center">삭제</th>
+                                                <th class="text-center">추가</th>
+                                                <th class="text-center">변경</th>
+                                                <th class="text-center">삭제</th>
+                                                <th class="text-center">추가/변경</th>
+                                                <th class="text-center">삭제</th>
+                                                <th class="text-center">추가</th>
+                                                <th class="text-center">변경</th>
+                                                <th class="text-center">삭제</th>
+                                                <th class="text-center">발송</th>
+                                                <th class="text-center">추가</th>
+                                                <th class="text-center">변경</th>
+                                                <th class="text-center">삭제</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <ng-container
+                                                    *ngIf="interfaceRecordList !== null; then exist else notExist"></ng-container>
+                                            <ng-template #exist>
+                                                <tr *ngFor="let interface of interfaceRecordList">
+                                                    <td>{{interface.date}}</td>
+                                                    <td *ngFor="let data of interface.data">{{data}}</td>
+                                                </tr>
+                                            </ng-template>
+                                            <ng-template #notExist>
+                                                <tr>
+                                                    <td colspan="16">결과 없음</td>
+                                                </tr>
+                                            </ng-template>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </article>
-    </ng-template>
-
+        </div>
+    </article>
 </div>
+
+
+<!-- 새로운 표 끝나는 자리 -->
+
+
+<ng-template #sendMessageTemplate>
+    <article class="col-sm-12 col-md-12 no-padding">
+        <div sa-widget color="blue">
+            <header>
+                <h2><strong>Send</strong> &nbsp; <i>mms</i></h2>
+            </header>
+            <div>
+                <div class="widget-body no-padding">
+                    <textarea markdownEditor class="custom-scroll" rows="4" (change)="sendMessageData($event)"> write here ! </textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 padding-5 pull-right">
+                        <button class="btn btn-warning pull-right" (click)="sendMessage()"> send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</ng-template>
+

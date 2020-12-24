@@ -38,6 +38,10 @@ const routes: Routes = [
       {
         path: "chart",
         loadChildren: "./features/chart/chart.module#ChartModule"
+      },
+      {
+        path: "meetingRoom",
+        loadChildren: "./features/meeting-room/meeting-room.module#MeetingRoomModule"
       }
     ]
   }

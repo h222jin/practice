@@ -18,7 +18,10 @@ import {RegisterRouting} from "@app/features/access/register/register-routing";
         SmartadminWidgetsModule,
         RegisterRouting
     ],
-    declarations: [ RegisterComponent ]
+    exports: [
+        RegisterComponent
+    ],
+    declarations: [RegisterComponent]
 })
 
 export class RegisterModule { }
