@@ -20,36 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/management/management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/management/management.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/management/management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/management/management.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/register/register.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/register/register.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/access/second-management/second-management.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/layout/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/layout/navigation/navigation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/ui/datatable/datatable.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/ui/datatable/datatable.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/10cm.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/cheeze.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/donghwan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/dongmin.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/jihyoung.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/kayclef.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/meno.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/minseok.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/parkmoonchi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/sejin.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/stella.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/taewook.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/wonseok.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/yoonju.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/_testData/youil.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/api/project-list.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/meeting-room.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/chart/chart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/forms/input/smartadmin-input.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/forms/input/smartadmin-input.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/api/graphs/chartjs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/api/graphs/chartjs.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,15 +82,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,7 +167,10 @@
       <workItem from="1608540183726" duration="26000" />
       <workItem from="1608611651068" duration="5000" />
       <workItem from="1608707265058" duration="8442000" />
-      <workItem from="1608783789738" duration="10826000" />
+      <workItem from="1608783789738" duration="11514000" />
+      <workItem from="1608883692622" duration="537000" />
+      <workItem from="1608901458723" duration="333000" />
+      <workItem from="1609127588656" duration="13048000" />
     </task>
     <servers />
   </component>
@@ -234,39 +215,43 @@
     </state>
     <state x="1729" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605495141451" />
     <state x="289" y="338" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607668290365" />
-    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608098996829">
+    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609128159592">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
-    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1608098996829" />
-    <state width="1878" height="364" key="GridCell.Tab.0.bottom" timestamp="1608795500570">
+    <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1609128159592" />
+    <state width="997" height="364" key="GridCell.Tab.0.bottom" timestamp="1609128462763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1878" height="364" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500570" />
-    <state width="1878" height="364" key="GridCell.Tab.0.center" timestamp="1608795500569">
+    <state width="997" height="364" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1609128462763" />
+    <state width="997" height="364" key="GridCell.Tab.0.center" timestamp="1609128462761">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1878" height="364" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500569" />
-    <state width="1878" height="364" key="GridCell.Tab.0.left" timestamp="1608795500569">
+    <state width="997" height="364" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1609128462761" />
+    <state width="997" height="364" key="GridCell.Tab.0.left" timestamp="1609128462761">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1878" height="364" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500569" />
-    <state width="1878" height="364" key="GridCell.Tab.0.right" timestamp="1608795500570">
+    <state width="997" height="364" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1609128462761" />
+    <state width="997" height="364" key="GridCell.Tab.0.right" timestamp="1609128462762">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1878" height="364" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1608795500570" />
+    <state width="997" height="364" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1609128462762" />
     <state x="560" y="345" key="Vcs.Push.Dialog.v2" timestamp="1607589354218">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="560" y="345" key="Vcs.Push.Dialog.v2/0.25.1920.1175@0.25.1920.1175" timestamp="1607589354218" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1608801040885">
+    <state x="474" y="288" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609135781367">
+      <screen x="0" y="25" width="1920" height="1175" />
+    </state>
+    <state x="474" y="288" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1609135781367" />
+    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1609138782919">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608801040885" />
+    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1609138782919" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -275,10 +260,10 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="683" y="348" key="refactoring.ChangeSignatureDialog/0.25.1920.1175@0.25.1920.1175" timestamp="1607582044187" />
-    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1608712966036">
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup" timestamp="1609128157485">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="2065" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605578787305" />
-    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1608712966036" />
+    <state x="625" y="286" width="670" height="752" key="search.everywhere.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1609128157485" />
   </component>
 </project>

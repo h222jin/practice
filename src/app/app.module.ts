@@ -29,6 +29,7 @@ import { MeetingRoomComponent } from './features/meeting-room/meeting-room.compo
         ApiGatewayService,
         {provide: API_URL_TOKEN, useValue: '/admin/api/v1'},
 
+
     ],
     bootstrap: [AppComponent]
 })

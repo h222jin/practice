@@ -10,6 +10,7 @@ import {routing} from "@app/features/meeting-room/meeting-room.routing";
 import {SmartadminDatatableModule} from "@app/shared/ui/datatable/smartadmin-datatable.module";
 import {RegisterModule} from "@app/features/access/register/register.module";
 import {SmartadminValidationModule} from "@app/shared/forms/validation/smartadmin-validation.module";
+import {SmartadminInputModule} from "@app/shared/forms/input/smartadmin-input.module";
 
 @NgModule({
     imports: [
@@ -20,6 +21,8 @@ import {SmartadminValidationModule} from "@app/shared/forms/validation/smartadmi
         SmartadminDatatableModule,
         RegisterModule,
         SmartadminValidationModule,
+        SmartadminInputModule,
+
     ],
     declarations: [MeetingRoomComponent]
 })

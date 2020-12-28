@@ -15,7 +15,7 @@ export class ChartComponent implements OnInit {
 
     @ViewChild(DatatableComponent) table: DatatableComponent;
 
-    public chartjsData: any;
+    public linechartData: any;
     public pie_chart1: any;
     public pie_chart2: any;
 
@@ -32,7 +32,7 @@ export class ChartComponent implements OnInit {
     ages = [];
     ageList = [];
     ageCount = [];
-
+    chart:boolean = false;
 
     reorderable: boolean = true;
     loadingIndicator: boolean = true;
@@ -58,14 +58,23 @@ export class ChartComponent implements OnInit {
 
     countData: any[];
     loadingIndicatorForV: boolean = true;
-    reorderableForV: boolean = true;
 
     constructor(private jsonApiService: JsonApiService) {
     }
 
     ngOnInit() {
+
+        this.jsonApiService.fetch('/graphs/pieData.json').subscribe((data) => {
+            this.pie_chart1 = data;
+
+        })
+
         this.jsonApiService.fetch('/graphs/linechartData.json').subscribe((data) => {
-            this.chartjsData = data;
+            this.linechartData = data;
+        })
+
+        this.jsonApiService.fetch('/graphs/doughnutData.json').subscribe((data) => {
+            this.pie_chart2 = data;
         })
 
         this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
@@ -74,21 +83,6 @@ export class ChartComponent implements OnInit {
             // push our inital complete list
             this.rows = data;
             this.loadingIndicator = false;
-        })
-
-        this.jsonApiService.fetch('/graphs/pieData.json').subscribe((data) => {
-            this.pie_chart1 = data;
-            this.pie_chart2 = data;
-
-        })
-        this.jsonApiService.fetch('/graphs/doughnutData.json').subscribe((data) => {
-            this.pie_chart2 = data;
-        })
-
-
-
-        this.jsonApiService.fetch('/tables/datatables.filters.json').subscribe(data => {
-            this.temp = [...data];
 
             for (let row of this.temp) {
                 this.offices.push(row.office)
@@ -114,6 +108,7 @@ export class ChartComponent implements OnInit {
                 return acc
             } , new Map ());
 
+
             for ( let [key, value] of this.ageCount.entries()) {
                 console.log('key: ', key , 'value : ', value);
                 this.pie_chart2.datasets[0].data.push(value)
@@ -127,9 +122,11 @@ export class ChartComponent implements OnInit {
                 this.pie_chart1.labels.push(key)
             }
 
-
+            this.chart = true;
 
         })
+
+
 
     }
 

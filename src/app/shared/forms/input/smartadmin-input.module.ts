@@ -5,7 +5,7 @@ import {ColorpickerDirective} from './colorpicker.directive';
 import {FileInputComponent} from './file-input/file-input.component';
 import {KnobDirective} from './knob.directive';
 import {MaskedInput} from './masked-input.directive';
-import {UiDatepickerDirective} from './ui-datepicker.directive';
+
 import {UiSpinner} from './ui-spinner.directive';
 import {XEditableComponent} from './x-editable.component';
 import {DuallistboxComponent} from './duallistbox.component';
@@ -17,6 +17,7 @@ import {SmartTimepickerDirective} from './smart-timepicker.directive'
 import {SmartClockpickerDirective} from './smart-clockpicker.directive'
 import {Select2Module} from "./select2/select2.module";
 import {OnOffSwitchModule} from "./on-off-switch/on-off-switch.module";
+import {UiDatepickerDirective} from "@app/shared/forms/input/ui-datepicker.directive";
 
 @NgModule({
   imports: [

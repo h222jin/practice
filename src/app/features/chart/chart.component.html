@@ -15,65 +15,61 @@
 
 
                     <!-- 표 + 그래프 들어가는 구간-->
-                    <div class="row">
-                        <div class="widget-body">
-                            <div class="row" *ngIf="chartjsData">
+                    <div class="widget-body">
+                        <div class="row" *ngIf="chart">
+                            <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <sa-chart-js type="line" [data]=linechartData></sa-chart-js>
+                            </article>
 
-                                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                    <sa-chart-js type="line" [data]=chartjsData></sa-chart-js>
-                                </article>
+                            <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <sa-chart-js type="member_chart1" [data]="pie_chart1"></sa-chart-js>
+                            </article>
 
-                                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                    <sa-chart-js type="member_chart1" [data]="pie_chart1"></sa-chart-js>
-                                </article>
-
-                                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                    <sa-chart-js type="member_chart2" [data]="pie_chart2"></sa-chart-js>
-                                </article>
-
-                            </div>
+                            <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <sa-chart-js type="member_chart2" [data]="pie_chart2"></sa-chart-js>
+                            </article>
                         </div>
                         <div class="row" style="padding: 8px 12px;">
                             <div class="widget-body">
                                 <div class="row">
                                     <br>
                                     <div class="form-group">
-<!--                                        <div class="col-md-2">-->
-<!--                                            <select [(ngModel)]="searchOptions.position" #position name="position"-->
-<!--                                                    (change)="searchSetting($event)"-->
-<!--                                                    class="form-control input-sm">-->
-<!--                                                <option value="" > position</option>-->
-<!--                                                <option [value]="position"-->
-<!--                                                        *ngFor="let position of positionList">{{position}}</option>-->
-<!--                                            </select>-->
-<!--                                        </div>-->
+                                        <!--                                        <div class="col-md-2">-->
+                                        <!--                                            <select [(ngModel)]="searchOptions.position" #position name="position"-->
+                                        <!--                                                    (change)="searchSetting($event)"-->
+                                        <!--                                                    class="form-control input-sm">-->
+                                        <!--                                                <option value="" > position</option>-->
+                                        <!--                                                <option [value]="position"-->
+                                        <!--                                                        *ngFor="let position of positionList">{{position}}</option>-->
+                                        <!--                                            </select>-->
+                                        <!--                                        </div>-->
                                         <div class="col-md-2">
-                                            <select [(ngModel)]="searchOptions.office"  name="office"
+                                            <select [(ngModel)]="searchOptions.office" name="office"
                                                     (change)="searchSetting($event)"
                                                     class="form-control input-sm">
-                                                <option value="" > office</option>
+                                                <option value=""> office</option>
                                                 <option [value]="office"
                                                         *ngFor="let office of officeList">{{office}}</option>
                                             </select>
                                         </div>
-<!--                                        <div class="col-md-2">-->
-<!--                                            <select [(ngModel)]="searchOptions.age"  name="age"-->
-<!--                                                    (change)="searchSetting($event)"-->
-<!--                                                    class="form-control input-sm">-->
-<!--                                                <option value="" disabled> age</option>-->
-<!--                                                <option [value]="age"-->
-<!--                                                        *ngFor="let age of ageList">{{age}}</option>-->
-<!--                                            </select>-->
-<!--                                        </div>-->
-<!--                                        <div class="col-md-2">-->
-<!--                                            <select [(ngModel)]="searchOptions.salary"  name="salary"-->
-<!--                                                    (change)="searchSetting($event)"-->
-<!--                                                    class="form-control input-sm">-->
-<!--                                                <option value="" disabled> salary</option>-->
-<!--                                                <option [value]="salary"-->
-<!--                                                        *ngFor="let salary of salaryList">{{salary}}</option>-->
-<!--                                            </select>-->
-<!--                                        </div>-->
+                                        <!--                                        <div class="col-md-2">-->
+                                        <!--                                            <select [(ngModel)]="searchOptions.age"  name="age"-->
+                                        <!--                                                    (change)="searchSetting($event)"-->
+                                        <!--                                                    class="form-control input-sm">-->
+                                        <!--                                                <option value="" disabled> age</option>-->
+                                        <!--                                                <option [value]="age"-->
+                                        <!--                                                        *ngFor="let age of ageList">{{age}}</option>-->
+                                        <!--                                            </select>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div class="col-md-2">-->
+                                        <!--                                            <select [(ngModel)]="searchOptions.salary"  name="salary"-->
+                                        <!--                                                    (change)="searchSetting($event)"-->
+                                        <!--                                                    class="form-control input-sm">-->
+                                        <!--                                                <option value="" disabled> salary</option>-->
+                                        <!--                                                <option [value]="salary"-->
+                                        <!--                                                        *ngFor="let salary of salaryList">{{salary}}</option>-->
+                                        <!--                                            </select>-->
+                                        <!--                                        </div>-->
 
 
                                         <div class="form-group">
@@ -82,7 +78,6 @@
                                             </a>
                                         </div>
                                     </div>
-
 
 
                                 </div>
@@ -134,7 +129,7 @@
                           pagerPrevious: 'fa fa-angle-double-left',
                           pagerNext: 'fa fa-angle-double-right'
                         }"
-                                        [reorderable]="reorderableForV">
+                                    >
                                     </ngx-datatable>
                                 </div>
                             </div>
