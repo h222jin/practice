@@ -12,6 +12,7 @@ import {RegisterModule} from "@app/features/access/register/register.module";
 import {SmartadminInputModule} from "@app/shared/forms/input/smartadmin-input.module";
 import {SmartadminValidationModule} from "@app/shared/forms/validation/smartadmin-validation.module";
 import {BookingService} from "@app/features/meeting-room/booking.service";
+import {BookingComponent} from "@app/features/meeting-room/booking.component";
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import {BookingService} from "@app/features/meeting-room/booking.service";
         SmartadminInputModule
 
     ],
-    declarations: [MeetingRoomComponent],
+    declarations: [MeetingRoomComponent, BookingComponent],
     providers: [BookingService]
 })
 export class MeetingRoomModule {}

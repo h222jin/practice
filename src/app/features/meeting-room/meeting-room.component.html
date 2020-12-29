@@ -37,23 +37,25 @@
                             <!--기본 테이블 형태-->
                             <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
                                 <thead>
-                                <tr>
-                                    <th class="text-align-center">Meeting room location</th>
+                                <tr >
+                                    <th class="text-align-center">Meeting room name</th>
+                                    <th class="text-align-center">leader</th>
                                     <th class="text-align-center">hours</th>
-                                    <th class="text-align-center">Members</th>
-                                    <th class="text-align-center">Status</th>
-                                    <th class="text-align-center">Starts</th>
-                                    <th class="text-align-center">Ends</th>
+                                    <th class="text-align-center">agenda</th>
+                                    <th class="text-align-center">state</th>
+                                    <th class="text-align-center">startDate</th>
+                                    <th class="text-align-center">endDate</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr *ngFor="let dataList of rows">
-                                    <td>{{dataList.roomName}}</td>
-                                    <td>{{dataList.hours}}</td>
-                                    <td>{{dataList.members}}</td>
-                                    <td>{{dataList.status}}</td>
-                                    <td>{{dataList.starts}}</td>
-                                    <td>{{dataList.ends}}</td>
+                                <tbody  *ngFor="let meeting of items; let i=index">
+                                <tr>
+                                    <td>{{meeting.roomName}}</td>
+                                    <td>{{meeting.leader}}</td>
+                                    <td>{{meeting.hours}}</td>
+                                    <td>{{meeting.agenda}}</td>
+                                    <td>{{meeting.state}}</td>
+                                    <td>{{meeting.startDate}}</td>
+                                    <td>{{meeting.endDate}}</td>
                                 </tr>
 
                                 </tbody>
@@ -100,23 +102,19 @@
     </sa-widgets-grid>
 
     <div class="pull-right">
-        <button type="button" class="btn btn-labeled btn-success"
-                (click)="booking()">
+        <button class="btn btn-labeled btn-success"
+                [class.active]="newBooking" (click)="booking()">
           <span class="btn-label">
             <i class="glyphicon glyphicon-ok"></i>
           </span>Booking
         </button>
     </div>
 
-    <!--div:content end-->
-</div>
-<br>
-<br><br>
+    <br>
+    <br>
+    <br>
 
-
-<ng-container *ngIf="newBooking">
-
-    <div sa-widget [editbutton]="false" [custombutton]="false">
+    <div sa-widget [editbutton]="false" [custombutton]="false" style="padding: 8px 12px;"  *ngIf="newBooking">
         <header>
             <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
             <h2>Visitor Register Form </h2>
@@ -124,32 +122,10 @@
 
         <div>
             <div class="widget-body">
-<!--                <div class="row"> &lt;!&ndash; 날짜 지정 &ndash;&gt;-->
-<!--                    <div class="col-sm-offset-2 col-sm-3">-->
-<!--                        <div class="input-group">-->
-<!--                            <input type="text" name="startDate" placeholder="Select a date" class="form-control datepicker"-->
-<!--                                   [saUiDatepicker]="{-->
-<!--                                    dateFormat: 'dd/mm/yy'-->
-<!--                                 }" >-->
-<!--                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-sm-3">-->
-<!--                        <div class="input-group">-->
-<!--                            <input type="text" name="endDate" placeholder="Select a date" class="form-control datepicker"-->
-<!--                                   [saUiDatepicker]="{-->
-<!--                                    dateFormat: 'dd/mm/yy'-->
-<!--                                 }" >-->
-<!--                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
                 <div class="row" >
                     <div class="form-inline">
                         <form id="checkout-form" class="smart-form"
                               novalidate="novalidate">
-<!--                              [saUiValidate]="validationOptions"-->
 
                             <fieldset>
                                 <div class="row">
@@ -157,7 +133,13 @@
                                         <label class="input">
                                             <i class="icon-prepend fa fa-tag"></i>
                                             <input type="text" name="roomName" placeholder="check out room name"
-                                                 [(ngModel)]="newBooking.roomName">
+                                                   [(ngModel)]="newBooking.roomName">
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-3">
+                                        <label class="input"> <i class="icon-prepend fa fa-comment"></i>
+                                            <input type="text" name="agenda" placeholder="agenda" [(ngModel)]="newBooking.agenda">
                                         </label>
                                     </section>
 
@@ -165,13 +147,6 @@
                                         <label class="input"> <i class="icon-prepend fa fa-user"></i>
                                             <input type="text" name="leader" placeholder="check out leader name"
                                                    [(ngModel)]="newBooking.leader">
-                                        </label>
-                                    </section>
-
-
-                                    <section class="col col-3">
-                                        <label class="input"> <i class="icon-prepend fa fa-comment"></i>
-                                            <input type="text" name="agenda" placeholder="agenda" [(ngModel)]="newBooking.agenda">
                                         </label>
                                     </section>
 
@@ -184,20 +159,55 @@
                                                 </select> <i></i> </label>
                                         </div>
                                     </section>
+                                </div>
+
+                                <div class="row">
+
+                                    <section class="col col-4">
+                                        <label class="input"> <i class="icon-prepend fa fa-user"></i>
+                                            <input type="text" name="startDate" placeholder="check out start Date"
+                                                   [(ngModel)]="newBooking.startDate">
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-4">
+                                        <label class="input"> <i class="icon-prepend fa fa-user"></i>
+                                            <input type="text" name="endDate" placeholder="check out end Date"
+                                                   [(ngModel)]="newBooking.endDate">
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-4">
+                                        <label class="input"> <i class="icon-prepend fa fa-clock-o"></i>
+                                            <input type="number" name="hours" placeholder="check out hours"
+                                                   [(ngModel)]="newBooking.hours">
+                                        </label>
+                                    </section>
 
                                 </div>
                             </fieldset>
 
                             <footer>
                                 <button type="submit" class="btn btn-labeled btn-info"
-                                        (click)="createBookking()">
-                                    save
+                                        (click)="createBooking()">
+                                    createBooking
                                 </button>
                             </footer>
                         </form>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
     </div>
-</ng-container>
+
+
+
+    <!--div:content end-->
+</div>
+
+
+
+

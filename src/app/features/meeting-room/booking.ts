@@ -6,15 +6,17 @@ export class Booking {
     startDate: any;
     endDate: any;
     state: string;
+    hours: number;
     static _id = 0;
 
-    constructor(roomName?, state?, leader?, agenda?) {
+    constructor(roomName?, state?, leader?, agenda?, hours?, startDate?, endDate?) {
         this.id = '' + Booking._id++;
         this.roomName = roomName;
-        this.state = state;
-        this.leader = leader;
         this.agenda = agenda;
-        this.startDate = new Date();
-        this.endDate = new Date();
+        this.leader = leader;
+        this.state = state;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.hours = hours;
     }
 }
