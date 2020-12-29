@@ -1,7 +1,9 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {BsModalRef, BsModalService} from "ngx-bootstrap";
 import {UiDatepickerDirective} from "@app/shared/forms/input/ui-datepicker.directive";
 import {JsonApiService} from "@app/core/services";
+import {Booking} from "@app/features/meeting-room/booking";
+import {BookingService} from "@app/features/meeting-room/booking.service";
 
 @Component({
   selector: 'ea-meeting-room',
@@ -10,110 +12,47 @@ import {JsonApiService} from "@app/core/services";
 })
 export class MeetingRoomComponent implements OnInit {
 
-  @ViewChild("bookingTemplate") bookingTemplate;
-  bsModalRef: BsModalRef;
+  @ViewChild('bookingTemplate') bookingTemplate;
 
-  public options = {
-    "ajax": 'assets/api/meeting-room.json',
-    "iDisplayLength": 15,
-    "columns": [
-      {"data": "roomName"},
-      {"data": "hours"},
-      {"data": "members"},
-      {"data": "status"},
-      {"data": "starts"},
-      {"data": "ends"}
-    ],
-    "order": [[1, 'asc']]
-  }
+  @Input() public state: any;
 
-  test = {
-    "data" :
-      {
-        "roomName": "",
-        "hours": "<td><div class='progress progress-xs' data-progressbar-value='100'><div class='progress-bar'></div></div></td>",
-        "members": "",
-        "status": "",
-        "actual": "<span class='sparkline text-align-center' data-sparkline-type='line' data-sparkline-width='100%' data-sparkline-height='25px'>20,-35,70</span>",
-        "starts": "01-21-2013",
-        "ends": "<strong>02-30-2018</strong>",
-        "action": "<button class='btn btn-xs'>Open case</button> <button class='btn btn-xs btn-danger pull-right' style='margin-left:5px'>Delete Record</button> <button class='btn btn-xs btn-success pull-right'>Save Changes</button> "
-      }
+  bookingTrackFn = (i, booking) => booking.id;
 
-  }
-  public validationOptions = {
-    rules : {
-      name : {
-        required : true
-      },
-      meetingRoomNumber : {
-        required : true
-      },
-      agenda : {
-        required : true
-      },
-    },
+  public newBooking: Booking;
+  public states: Array<any>;
+  public items: Array<Booking> = [];
 
-    // Messages for form validation
-    messages : {
-      name : {
-        required : 'Please enter your name'
-      },
-      meetingRoomNumber : {
-        required : 'Please enter room number'
-      },
-      agenda : {
-        required: 'Please select your meeting agenda'
-      }
-    }
-  };
-
-  private temp: any[];
-  private rows: any;
-  private loadingIndicator: boolean;
+  rows =[];
 
   constructor(
-      private modalService: BsModalService,
-      private jsonApiService: JsonApiService
-  ) { }
+      private bookingService: BookingService
+  ) {
+    this.states = this.bookingService.states
+  }
 
   ngOnInit() {
 
-    
-    this.jsonApiService.fetch('/meeting-room.json').subscribe(data => {
-      this.temp = [...data];
-      // push our inital complete list
-      this.rows = data;
-      this.loadingIndicator = false;
+    this.bookingTemplate = false;
+    this.bookingService.subject.subscribe( (booking: Array<Booking>) => {
+      this.setItems(booking);
     })
-    
-    
+    this.setItems(this.bookingService.bookings);
+
+  }
+
+  setItems(bookings: Array<Booking>) {
+    this.items = bookings.filter(it => it.state == this.state)
+  }
+
+  createBookking() {
+    this.bookingService.createBooking(this.newBooking);
+    this.newBooking = null;
   }
 
   booking() {
-    this.bookingTemplate = true;
+    // new booking 으로 init
+    this.newBooking = new Booking();
+   //this.bookingTemplate = true;
   }
 
-  getRoomnumberFn(event: any) {
-    this.test.data.status = event.target.value;
-
-  }
-
-  getNameFn(event: any) {
-    this.test.data.members = event.target.value;
-  }
-
-  getAgendaFn(event: any) {
-    this.test.data.roomName = event.target.value;
-  }
-
-  save() {
-    console.log(this.test.data);
-    this.rows.push(this.test.data);
-    this.bookingTemplate = false;
-   // this.jsonApiService.fetch('/meeting-room.json').subscribe(data => {
-   //   data.columns.push(this.test.data);
-   // })
-
-  }
 }

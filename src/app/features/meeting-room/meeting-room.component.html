@@ -34,7 +34,7 @@
                         <!-- widget content -->
 
                         <div class="widget-body no-padding">
-
+                            <!--기본 테이블 형태-->
                             <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
                                 <thead>
                                 <tr>
@@ -59,6 +59,7 @@
                                 </tbody>
                             </table>
 
+                            <!--sa-datatable 형태-->
 <!--                            <sa-datatable [options]="options"-->
 
 <!--                                          tableClass="display projects-table table table-striped table-bordered table-hover"-->
@@ -83,7 +84,6 @@
 <!--                                    </th>-->
 <!--                                </tr>-->
 <!--                                </thead>-->
-
 <!--                            </sa-datatable>-->
 
 
@@ -114,7 +114,7 @@
 <br><br>
 
 
-<ng-container #booking *ngIf="bookingTemplate">
+<ng-container *ngIf="newBooking">
 
     <div sa-widget [editbutton]="false" [custombutton]="false">
         <header>
@@ -124,59 +124,73 @@
 
         <div>
             <div class="widget-body">
-                <div class="row">
-                    <div class="col-sm-offset-2 col-sm-3">
-                        <div class="input-group">
-                            <input type="text" name="startDate" placeholder="Select a date" class="form-control datepicker"
-                                   [saUiDatepicker]="{
-                                    dateFormat: 'dd/mm/yy'
-                                 }" >
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="input-group">
-                            <input type="text" name="endDate" placeholder="Select a date" class="form-control datepicker"
-                                   [saUiDatepicker]="{
-                                    dateFormat: 'dd/mm/yy'
-                                 }" >
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="row"> &lt;!&ndash; 날짜 지정 &ndash;&gt;-->
+<!--                    <div class="col-sm-offset-2 col-sm-3">-->
+<!--                        <div class="input-group">-->
+<!--                            <input type="text" name="startDate" placeholder="Select a date" class="form-control datepicker"-->
+<!--                                   [saUiDatepicker]="{-->
+<!--                                    dateFormat: 'dd/mm/yy'-->
+<!--                                 }" >-->
+<!--                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-3">-->
+<!--                        <div class="input-group">-->
+<!--                            <input type="text" name="endDate" placeholder="Select a date" class="form-control datepicker"-->
+<!--                                   [saUiDatepicker]="{-->
+<!--                                    dateFormat: 'dd/mm/yy'-->
+<!--                                 }" >-->
+<!--                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <div class="row">
+                <div class="row" >
                     <div class="form-inline">
                         <form id="checkout-form" class="smart-form"
-                              [saUiValidate]="validationOptions"
                               novalidate="novalidate">
+<!--                              [saUiValidate]="validationOptions"-->
+
                             <fieldset>
                                 <div class="row">
-                                    <section class="col col-4">
+                                    <section class="col col-3">
+                                        <label class="input">
+                                            <i class="icon-prepend fa fa-tag"></i>
+                                            <input type="text" name="roomName" placeholder="check out room name"
+                                                 [(ngModel)]="newBooking.roomName">
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-3">
                                         <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                                            <input type="text" name="name" placeholder="name" (change)="getNameFn($event)">
+                                            <input type="text" name="leader" placeholder="check out leader name"
+                                                   [(ngModel)]="newBooking.leader">
                                         </label>
                                     </section>
 
 
-                                    <section class="col col-4">
-                                        <label class="input"> <i class="icon-prepend fa fa-tag"></i>
-                                            <input type="number" name="meetingRoomNumber"
-                                                   placeholder="room number" (change)="getRoomnumberFn($event)">
-                                        </label>
-                                    </section>
-
-                                    <section class="col col-4">
+                                    <section class="col col-3">
                                         <label class="input"> <i class="icon-prepend fa fa-comment"></i>
-                                            <input type="text" name="agenda" placeholder="agenda" (change)="getAgendaFn($event)">
+                                            <input type="text" name="agenda" placeholder="agenda" [(ngModel)]="newBooking.agenda">
                                         </label>
                                     </section>
+
+                                    <section>
+                                        <div class="col col-3">
+                                            <label class="select">
+                                                <select class="input-sm" name="state" [(ngModel)]="newBooking.state">
+                                                    <option *ngFor="let state of states"
+                                                            [value]="state.name">{{state.name}}</option>
+                                                </select> <i></i> </label>
+                                        </div>
+                                    </section>
+
                                 </div>
                             </fieldset>
 
                             <footer>
                                 <button type="submit" class="btn btn-labeled btn-info"
-                                        (click)="save()">
+                                        (click)="createBookking()">
                                     save
                                 </button>
                             </footer>

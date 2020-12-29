@@ -9,8 +9,10 @@ import {MeetingRoomComponent} from "@app/features/meeting-room/meeting-room.comp
 import {routing} from "@app/features/meeting-room/meeting-room.routing";
 import {SmartadminDatatableModule} from "@app/shared/ui/datatable/smartadmin-datatable.module";
 import {RegisterModule} from "@app/features/access/register/register.module";
-import {SmartadminValidationModule} from "@app/shared/forms/validation/smartadmin-validation.module";
 import {SmartadminInputModule} from "@app/shared/forms/input/smartadmin-input.module";
+import {SmartadminValidationModule} from "@app/shared/forms/validation/smartadmin-validation.module";
+import {BookingService} from "@app/features/meeting-room/booking.service";
+
 
 @NgModule({
     imports: [
@@ -20,10 +22,10 @@ import {SmartadminInputModule} from "@app/shared/forms/input/smartadmin-input.mo
         SmartadminWidgetsModule,
         SmartadminDatatableModule,
         RegisterModule,
-        SmartadminValidationModule,
-        SmartadminInputModule,
+        SmartadminInputModule
 
     ],
-    declarations: [MeetingRoomComponent]
+    declarations: [MeetingRoomComponent],
+    providers: [BookingService]
 })
 export class MeetingRoomModule {}
