@@ -1,6 +1,6 @@
 <div id="content">
     <div class="row">
-        <sa-big-breadcrumbs [items]="['Meeting Room']" icon="map-marker"
+        <sa-big-breadcrumbs [items]="['Meeting room', '미팅룸 예약']" icon="map-marker"
                             class="col-xc-12 col-sm-3 col-md-7 col-lg-4"></sa-big-breadcrumbs>
     </div>
 
@@ -9,102 +9,97 @@
         <div class="row">
             <!-- NEW WIDGET START -->
             <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="alert alert-info">
-                    <strong>NOTE:</strong> All the data is loaded from a seperate JSON file
-                </div>
+
 
                 <!--add booking -->
+
                 <div sa-widget [editbutton]="false" [custombutton]="false" style="padding: 8px 12px;"
-                     *ngIf="newBooking">
+                     *ngIf="newBooking" class="widget-body">
                     <header>
                         <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
                         <h2>Visitor Register Form </h2>
                     </header>
 
-                    <div>
-                        <div class="widget-body">
+
+                    <form id="checkout-form" class="smart-form widget-body">
+                        <fieldset>
                             <div class="row">
-                                <div class="form-inline">
-                                    <form id="checkout-form" class="smart-form"
-                                          novalidate="novalidate">
+                                <section class="col col-3">
+                                    <label class="input">
+                                        <i class="icon-prepend fa fa-tag"></i>
+                                        <input type="text" name="roomName"
+                                               placeholder="check out room name"
+                                               [(ngModel)]="newBooking.roomName">
+                                    </label>
+                                </section>
 
-                                        <fieldset>
-                                            <div class="row">
-                                                <section class="col col-3">
-                                                    <label class="input">
-                                                        <i class="icon-prepend fa fa-tag"></i>
-                                                        <input type="text" name="roomName"
-                                                               placeholder="check out room name"
-                                                               [(ngModel)]="newBooking.roomName">
-                                                    </label>
-                                                </section>
+                                <section class="col col-3">
+                                    <label class="input"> <i class="icon-prepend fa fa-comment"></i>
+                                        <input type="text" name="agenda" placeholder="agenda"
+                                               [(ngModel)]="newBooking.agenda">
+                                    </label>
+                                </section>
 
-                                                <section class="col col-3">
-                                                    <label class="input"> <i class="icon-prepend fa fa-comment"></i>
-                                                        <input type="text" name="agenda" placeholder="agenda"
-                                                               [(ngModel)]="newBooking.agenda">
-                                                    </label>
-                                                </section>
+                                <section class="col col-3">
+                                    <label class="input"> <i class="icon-prepend fa fa-user"></i>
+                                        <input type="text" name="leader"
+                                               placeholder="check out leader name"
+                                               [(ngModel)]="newBooking.leader">
+                                    </label>
+                                </section>
 
-                                                <section class="col col-3">
-                                                    <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                                                        <input type="text" name="leader"
-                                                               placeholder="check out leader name"
-                                                               [(ngModel)]="newBooking.leader">
-                                                    </label>
-                                                </section>
-
-                                                <section>
-                                                    <div class="col col-3">
-                                                        <label class="select">
-                                                            <select class="input-sm" name="state"
-                                                                    [(ngModel)]="newBooking.state">
-                                                                <option *ngFor="let state of states"
-                                                                        [value]="state.name">{{state.name}}</option>
-                                                            </select> <i></i> </label>
-                                                    </div>
-                                                </section>
-                                            </div>
-
-                                            <div class="row">
-
-                                                <section class="col col-4">
-                                                    <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                                                        <input type="text" name="startDate"
-                                                               placeholder="check out start Date"
-                                                               [(ngModel)]="newBooking.startDate">
-                                                    </label>
-                                                </section>
-
-                                                <section class="col col-4">
-                                                    <label class="input"> <i class="icon-prepend fa fa-user"></i>
-                                                        <input type="text" name="endDate"
-                                                               placeholder="check out end Date"
-                                                               [(ngModel)]="newBooking.endDate">
-                                                    </label>
-                                                </section>
-
-                                                <section class="col col-4">
-                                                    <label class="input"> <i class="icon-prepend fa fa-clock-o"></i>
-                                                        <input type="number" name="hours" placeholder="check out hours"
-                                                               [(ngModel)]="newBooking.hours">
-                                                    </label>
-                                                </section>
-
-                                            </div>
-                                        </fieldset>
-
-                                        <footer>
-                                            <button type="submit" class="btn btn-labeled btn-info"
-                                                    (click)="createBooking()">
-                                                createBooking
-                                            </button>
-                                        </footer>
-                                    </form>
-                                </div>
+                                <section>
+                                    <div class="col col-3">
+                                        <label class="select">
+                                            <select class="input-sm" name="state"
+                                                    [(ngModel)]="newBooking.state">
+                                                <option *ngFor="let state of states"
+                                                        [value]="state.name">{{state.name}}</option>
+                                            </select> <i></i> </label>
+                                    </div>
+                                </section>
                             </div>
+
+                            <div class="row">
+
+                                <section class="col col-4">
+                                    <label class="input"> <i class="icon-prepend fa fa-user"></i>
+                                        <input type="text" name="startDate"
+                                               placeholder="check out start Date"
+                                               [(ngModel)]="newBooking.startDate">
+                                    </label>
+                                </section>
+
+                                <section class="col col-4">
+                                    <label class="input"> <i class="icon-prepend fa fa-user"></i>
+                                        <input type="text" name="endDate"
+                                               placeholder="check out end Date"
+                                               [(ngModel)]="newBooking.endDate">
+                                    </label>
+                                </section>
+
+                                <section class="col col-4">
+                                    <label class="input"> <i class="icon-prepend fa fa-clock-o"></i>
+                                        <input type="number" name="hours" placeholder="check out hours"
+                                               [(ngModel)]="newBooking.hours">
+                                    </label>
+                                </section>
+
+                            </div>
+                        </fieldset>
+
+                        <div class="widget-footer">
+                            <footer>
+                                <button type="submit" class="btn btn-labeled btn-info"
+                                        (click)="createBooking()">
+                                    <h5>createBooking</h5>
+                                </button>
+                            </footer>
                         </div>
-                    </div>
+
+                    </form>
+
+
                 </div>
                 <!--end add booking-->
 
