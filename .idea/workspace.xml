@@ -23,10 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/booking.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/booking.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/booking.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/booking.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/booking.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +165,7 @@
       <workItem from="1608901458723" duration="333000" />
       <workItem from="1609127588656" duration="15718000" />
       <workItem from="1609220306638" duration="12360000" />
-      <workItem from="1609302502655" duration="6247000" />
+      <workItem from="1609302502655" duration="6671000" />
     </task>
     <servers />
   </component>
@@ -246,11 +242,11 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="474" y="288" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1609135781367" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1609308544707">
+    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1609313826492">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1609308544707" />
+    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1609313826492" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
