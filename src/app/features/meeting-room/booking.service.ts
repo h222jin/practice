@@ -13,8 +13,8 @@ export class BookingService {
     ];
 
     states = [
-        {name: "available", title: "booking available", icon: "exclamation"},
-        {name: "booked", title: "booked", icon: "warning"}
+        {name: "available", title: "booking available"},
+        {name: "booked", title: "booked"}
     ];
 
     constructor() {
@@ -22,18 +22,10 @@ export class BookingService {
     }
 
     createBooking(booking:Booking) {
-        console.log('service: ',booking);
         this.bookings.push(booking);
+        console.log('service: ',booking);
         this.subject.next(this.bookings);
 
     }
-
-    updateBooking(id, state) {
-
-    }
-    deleteBooking(id, state) {
-
-    }
-
 
 }

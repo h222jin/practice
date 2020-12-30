@@ -16,46 +16,39 @@ export class MeetingRoomComponent implements OnInit {
 
   @Input() public state: any;
 
-  bookingTrackFn = (i, booking) => booking.id;
-
   public newBooking: Booking;
+
   public states: Array<any>;
   public items: Array<Booking> = [];
-  public list: Array<Booking> = [];
-
 
   constructor(
       private bookingService: BookingService
   ) {
-    //this.states = this.bookingService.states
+    this.states = this.bookingService.states
   }
 
   ngOnInit() {
     this.bookingService.subject.subscribe( (bookings: Array<Booking>) => {
+      console.log(bookings);
       this.setItems(bookings);
-      this.setList(bookings);
     })
 
     this.setItems(this.bookingService.bookings);
-    this.setList(this.bookingService.bookings);
   }
 
   setItems(bookings: Array<Booking>) {
-    this.items = bookings.filter(it => it.state == this.state)
+    this.items = bookings.filter(it => it.state == this.state.name);
   }
 
-  setList(bookings: Array<Booking>) {
-    this.list = bookings.filter(it => it.state == this.state.name)
-    console.log(this.list);
-  }
 
   createBooking() {
     this.bookingService.createBooking(this.newBooking);
-    //this.newBooking = null;
+    this.newBooking = null;
   }
 
   booking() {
     // new booking 으로 init
     this.newBooking = new Booking();
+    this.newBooking.state = 'available';
   }
 }
