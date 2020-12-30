@@ -47,15 +47,15 @@
                                     <th class="text-align-center">endDate</th>
                                 </tr>
                                 </thead>
-                                <tbody  *ngFor="let meeting of items; let i=index">
+                                <tbody  *ngFor="let one of list; let i=index">
                                 <tr>
-                                    <td>{{meeting.roomName}}</td>
-                                    <td>{{meeting.leader}}</td>
-                                    <td>{{meeting.hours}}</td>
-                                    <td>{{meeting.agenda}}</td>
-                                    <td>{{meeting.state}}</td>
-                                    <td>{{meeting.startDate}}</td>
-                                    <td>{{meeting.endDate}}</td>
+                                    <td>{{one.roomName}}</td>
+                                    <td>{{one.leader}}</td>
+                                    <td>{{one.hours}}</td>
+                                    <td>{{one.agenda}}</td>
+                                    <td>{{one.state}}</td>
+                                    <td>{{one.startDate}}</td>
+                                    <td>{{one.endDate}}</td>
                                 </tr>
 
                                 </tbody>
@@ -113,6 +113,8 @@
     <br>
     <br>
     <br>
+
+
 
     <div sa-widget [editbutton]="false" [custombutton]="false" style="padding: 8px 12px;"  *ngIf="newBooking">
         <header>

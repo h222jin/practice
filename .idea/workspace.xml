@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/booking.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/booking.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/booking.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/booking.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/booking.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/meeting-room/meeting-room.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,15 +76,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,7 +165,8 @@
       <workItem from="1608883692622" duration="537000" />
       <workItem from="1608901458723" duration="333000" />
       <workItem from="1609127588656" duration="15718000" />
-      <workItem from="1609220306638" duration="11833000" />
+      <workItem from="1609220306638" duration="12360000" />
+      <workItem from="1609302502655" duration="2301000" />
     </task>
     <servers />
   </component>
@@ -218,26 +215,26 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1278" y="473" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1920.1175@0.25.1920.1175" timestamp="1609128159592" />
-    <state width="1878" height="364" key="GridCell.Tab.0.bottom" timestamp="1609230131322">
+    <state width="1878" height="364" key="GridCell.Tab.0.bottom" timestamp="1609244743805">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1878" height="364" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1609230131322" />
-    <state width="1878" height="364" key="GridCell.Tab.0.center" timestamp="1609230131322">
+    <state width="1878" height="364" key="GridCell.Tab.0.bottom/0.25.1920.1175@0.25.1920.1175" timestamp="1609244743805" />
+    <state width="1878" height="364" key="GridCell.Tab.0.center" timestamp="1609244743804">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1878" height="364" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1609230131322" />
-    <state width="1878" height="364" key="GridCell.Tab.0.left" timestamp="1609230131321">
+    <state width="1878" height="364" key="GridCell.Tab.0.center/0.25.1920.1175@0.25.1920.1175" timestamp="1609244743804" />
+    <state width="1878" height="364" key="GridCell.Tab.0.left" timestamp="1609244743804">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619041" />
-    <state width="1878" height="364" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1609230131321" />
-    <state width="1878" height="364" key="GridCell.Tab.0.right" timestamp="1609230131322">
+    <state width="1878" height="364" key="GridCell.Tab.0.left/0.25.1920.1175@0.25.1920.1175" timestamp="1609244743804" />
+    <state width="1878" height="364" key="GridCell.Tab.0.right" timestamp="1609244743805">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1605084619042" />
-    <state width="1878" height="364" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1609230131322" />
+    <state width="1878" height="364" key="GridCell.Tab.0.right/0.25.1920.1175@0.25.1920.1175" timestamp="1609244743805" />
     <state x="560" y="345" key="Vcs.Push.Dialog.v2" timestamp="1607589354218">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
@@ -246,11 +243,11 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="474" y="288" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1609135781367" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1609230102074">
+    <state x="300" y="379" width="1052" height="581" key="find.popup" timestamp="1609308544707">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
-    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1609230102074" />
+    <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1609308544707" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">
       <screen x="0" y="25" width="1920" height="1175" />
     </state>

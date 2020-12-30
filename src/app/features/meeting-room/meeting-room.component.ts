@@ -21,6 +21,7 @@ export class MeetingRoomComponent implements OnInit {
   public newBooking: Booking;
   public states: Array<any>;
   public items: Array<Booking> = [];
+  public list: Array<Booking> = [];
 
 
   constructor(
@@ -32,15 +33,20 @@ export class MeetingRoomComponent implements OnInit {
   ngOnInit() {
     this.bookingService.subject.subscribe( (bookings: Array<Booking>) => {
       this.setItems(bookings);
-      console.log('on in it : ', bookings);
+      this.setList(bookings);
     })
 
     this.setItems(this.bookingService.bookings);
-
+    this.setList(this.bookingService.bookings);
   }
 
   setItems(bookings: Array<Booking>) {
     this.items = bookings.filter(it => it.state == this.state)
+  }
+
+  setList(bookings: Array<Booking>) {
+    this.list = bookings.filter(it => it.state == this.state.name)
+    console.log(this.list);
   }
 
   createBooking() {

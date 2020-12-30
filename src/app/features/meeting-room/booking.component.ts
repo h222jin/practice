@@ -11,6 +11,7 @@ export class BookingComponent implements OnInit {
 
     @Input() public state: any;
 
+
     bookingTrackFn = (i, booking) => booking.id;
 
     public newBooking: Booking;
