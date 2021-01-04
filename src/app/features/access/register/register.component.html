@@ -26,8 +26,7 @@
                                     <br>
                                 <section>
                                     <label class="dropdown-toggle">
-                                        <select [(ngModel)]="searchOptions.company" name="company"
-                                                class="form-control" (change)="getCompany($event)">
+                                        <select name="company" class="form-control" (change)="getCompany($event)">
                                             <option value="" disabled> 방문 회사 </option>
                                             <option [value]="company"
                                                     *ngFor="let company of companyFilter">{{company}}</option>
@@ -45,6 +44,8 @@
                                 <section>
                                     <label class="input"> <i class="icon-append fa fa-phone"></i>
                                         <input type="tel" name="mobileNo" id="mobileNo" placeholder="연락처 * "
+                                               pattern="^01([0|1|6|7|8|9]{1})([0-9]{7,8})$"
+                                               (focusout)="mobileNoFocusout($event)" (focus)="mobileNoFocus($event)"
                                                (change)="getMobileNo($event)"/>
                                     </label>
                                 </section>

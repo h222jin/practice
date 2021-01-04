@@ -31,6 +31,8 @@ export class RegisterComponent implements OnInit {
     }
 
     ngOnInit() {
+        // register button disabled
+        this.regData = true;
         // option - company 설정
         this.jsonApiService.fetch('/_testData/test.json')
             .subscribe(data => {
@@ -59,14 +61,13 @@ export class RegisterComponent implements OnInit {
     }
 
     registerData() {
-        if(this.regMobileNo && this.regCompany && this.regName.length > 1) {
-            this.regData = true;
-            this.smartMessageBox()
+        if(this.regMobileNo && this.regCompany && this.regName.length > 0) {
+            this.smartMessageBox();
+            this.mobileNoFocus(event);
         }
          else {
             alert('필수 항목을 모두 입력해 주세요.')
         }
-
     }
 
     smartMessageBox(){
@@ -96,5 +97,23 @@ export class RegisterComponent implements OnInit {
 
     }
 
+    mobileNoFocusout(event) {
+        var pattern3 = /[~!@#$%^&*()_+|<>?:{}]/;	// 특수문자
+        let value = event.target.value;
+        if (value === '') {
+            return;
+        } else if (pattern3.test(value)) {
+            this.regData = true;
+            return;
+        } else if (value.length != 10 && value.length != 11) {
+            this.regData = true;
+            alert('특수문자를 제외한 숫자만 입력해주세요.');
+            return;
+        }
+    }
+
+    mobileNoFocus(event) {
+        this.regData = false;
+    }
 
 }
