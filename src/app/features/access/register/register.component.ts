@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {JsonApiService} from "@app/core/services";
+import {JsonApiService, NotificationService} from "@app/core/services";
 import {isDateValid} from "ngx-bootstrap";
 
 @Component({
@@ -15,32 +15,27 @@ export class RegisterComponent implements OnInit {
     rows = [];
     companyList = [];
     companyFilter = [];
-    registerMember = [];
-    jsonData = [{
-        "name": "kaclef",
-        "gender": "male",
-        "groupName": "soran",
-        "company": "HappyRobot",
-        "position": "vocal"
-    }]
+    regName: string;
+    regMobileNo: string;
+    regCompany: string;
 
     public searchOptions = {
         company: ''
     }
+    regData: boolean = false;
 
     constructor(
-        private jsonApiService: JsonApiService
+        private jsonApiService: JsonApiService,
+        private notificationService: NotificationService
     ) {
     }
 
     ngOnInit() {
+        // option - company 설정
         this.jsonApiService.fetch('/_testData/test.json')
             .subscribe(data => {
                 this.temp = [...data];
-                console.log(this.temp);
-
                 this.rows = data;
-                console.log(this.rows);
 
                 for (let companies of this.temp) {
                     this.companyList.push(companies.company);
@@ -48,46 +43,57 @@ export class RegisterComponent implements OnInit {
                 this.companyFilter = this.companyList.filter(
                     (item, idx, array) => { return array.indexOf( item ) == idx; }
                 )
-
-
             })
-
-
-
     }
 
-    onSubmit() {
-
-    }
 
     getName(event) {
-       this.jsonData[0].name = event.target.value
+        this.regName = event.target.value;
     }
-
-    getGroup(event) {
-        this.jsonData[0].groupName = event.target.value
-    }
-
-    getPosition(event) {
-        this.jsonData[0].position = event.target.value
+    getMobileNo(event) {
+        this.regMobileNo = event.target.value;
     }
 
     getCompany(event) {
-        this.jsonData[0].company = event.target.value
-    }
-
-    getGender(event) {
-        this.jsonData[0].gender = event.target.value
+        this.regCompany = event.target.value;
     }
 
     registerData() {
-        this.jsonApiService.fetch('/_testData/test.json')
-            .subscribe(data => {
-                this.temp = [...data, this.jsonData];
-                console.log(this.temp);
-                }
-            )
-        return this.temp;
+        if(this.regMobileNo && this.regCompany && this.regName.length > 1) {
+            this.regData = true;
+            this.smartMessageBox()
+        }
+         else {
+            alert('필수 항목을 모두 입력해 주세요.')
+        }
+
+    }
+
+    smartMessageBox(){
+        this.notificationService.smartMessageBox({
+            title: "<i class=\"fa fa-send-o\"></i>  &nbsp; 출입 등록 요청",
+            content: this.regCompany + "  방문을 위해 얼굴을 등록할 수 있는 URL이 포함된 MMS가 '" + this.regName + "'님의 휴대폰번호( '" + this.regMobileNo + "' )로 전송됩니다. 전송하시겠습니까?",
+            buttons: '[아니요][네]'
+        }, (ButtonPressed) => {
+            if(ButtonPressed === "네") {
+                this.notificationService.smallBox({
+                    title: this.regMobileNo+ " 로 전송 완료되 었습니다.",
+                    content: "<i class='fa fa-clock-o'></i> 이 알림은 곧 사라집니다.",
+                    color: "#3F4B3B",
+                    iconSmall: "fa fa-thumbs-up bounce animated",
+                    timeout: 3000
+                })
+            } else {
+                this.notificationService.smallBox({
+                    title: "전송에 실패하였습니다. 다시 시도해 주세요.",
+                    content: "<i class='fa fa-clock-o'></i> 이 알림은 곧 사라집니다.",
+                    color: "#566270",
+                    iconSmall: "bounce animated",
+                    timeout: 3000
+                })
+            }
+        })
+
     }
 
 

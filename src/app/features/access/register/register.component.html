@@ -16,18 +16,19 @@
                 </header>
                 <div>
                     <div class="widget-body no-padding">
-
-                        <!--                        <sa-review-form></sa-review-form>-->
-
                         <form id="review-form" class="smart-form" novalidate="novalidate">
-                            <header>방문자 출입 등록</header>
-
                             <fieldset>
+                                    <div class="alert alert-info">
+                                        <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 아래 세가지 내용은 모두 필수 입력 항목으로, 정확히 기재 해주세요.
+                                        <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 연락처는 '-'을 제외한 <strong>숫자만</strong> 넣어 주세요.
+                                        <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 그 외 문의사항은 <strong>'02-2222-2334'</strong>로 연락 바랍니다.
+                                    </div>
+                                    <br>
                                 <section>
                                     <label class="dropdown-toggle">
                                         <select [(ngModel)]="searchOptions.company" name="company"
                                                 class="form-control" (change)="getCompany($event)">
-                                            <option value="" disabled> 방문 회사</option>
+                                            <option value="" disabled> 방문 회사 </option>
                                             <option [value]="company"
                                                     *ngFor="let company of companyFilter">{{company}}</option>
                                         </select>
@@ -35,33 +36,16 @@
                                 </section>
 
                                 <section>
-                                    <label class="dropdown-toggle">
-                                        <select  name="gender" class="form-control" (change)="getGender($event)">
-                                            <option value="" disabled> 성별 </option>
-                                            <option value="woman" > 여성 </option>
-                                            <option value="man" > 남성 </option>
-                                        </select>
-                                    </label>
-                                </section>
-
-                                <section>
                                     <label class="input"> <i class="icon-append fa fa-user"></i>
-                                        <input type="text" name="name" id="name" placeholder="이름"
+                                        <input type="text" name="name" id="name" placeholder="이름 * "
                                         (change)="getName($event)"/>
                                     </label>
                                 </section>
 
                                 <section>
-                                    <label class="input"> <i class="icon-append fa fa-group"></i>
-                                        <input type="text" name="gender" id="group" placeholder="group"
-                                        (change)="getGroup($event)"/>
-                                    </label>
-                                </section>
-
-                                <section>
-                                    <label class="input">
-                                        <input type="text" name="position" id="position" placeholder="position"
-                                               (change)="getPosition($event)"/>
+                                    <label class="input"> <i class="icon-append fa fa-phone"></i>
+                                        <input type="tel" name="mobileNo" id="mobileNo" placeholder="연락처 * "
+                                               (change)="getMobileNo($event)"/>
                                     </label>
                                 </section>
 
@@ -69,8 +53,8 @@
 
                             </fieldset>
                             <footer>
-                                <button type="submit" class="btn btn-primary" (click)="registerData()">
-                                    <h6> Register </h6>
+                                <button type="submit" class="btn btn-primary" [disabled]="regData" (click)="registerData()">
+                                    <h1 class="font-xs"> Register </h1>
                                 </button>
                             </footer>
                         </form>
