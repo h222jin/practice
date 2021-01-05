@@ -10,7 +10,8 @@
     <sa-widgets-grid>
         <div class="row">
             <article class="col-md-5 col-md-offset-3">
-                <div sa-widget [editbutton]="false" [custombutton]="false">
+                <div sa-widget [colorbutton]="false" [editbutton]="false" [deletebutton]="false" [sortable]="false"
+                     [togglebutton]="false" [fullscreenbutton]="false">
                     <header>
                         <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
                         <h2>Visitor Register Form </h2>
@@ -26,16 +27,17 @@
                                     <strong>'02-2222-2334'</strong>로연락 바랍니다.</p>
                             </div>
 
+                            <legend></legend>
+
                             <form (ngSubmit)="onSubmit()" novalidate="novalidate"
                                   [saBootstrapValidator]="validatorOptions">
 
                                 <fieldset>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-sm-6 selectContainer">
+                                            <div class="col-sm-6 col-md-offset-3 selectContainer">
                                                 <label class="control-label"> 회사 </label>
-                                                <select name="company" class="form-control" [(ngModel)]="data.company"
-                                                        (focus)="mobileNoFocus($event)">
+                                                <select name="company" class="form-control" [(ngModel)]="data.company">
                                                     <option value="" disabled> 방문 회사</option>
                                                     <option [value]="company"
                                                             *ngFor="let company of companyFilter">{{company}}</option>
@@ -48,7 +50,7 @@
                                 <fieldset>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-6 col-md-offset-3">
                                                 <label class="control-label"> 이름 </label>
                                                 <input type="text" class="form-control" name="name" [(ngModel)]="data.name"/>
                                             </div>
@@ -61,11 +63,10 @@
                                 <fieldset>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-6 col-md-offset-3">
                                                 <label class="control-label"> 연락처 </label>
                                                 <input type="text" class="form-control" name="mobileNo" [(ngModel)]="data.mobileNo"
-                                                       pattern="^01([0|1|6|7|8|9]{1})([0-9]{7,8})$"
-                                                       (focus)="mobileNoFocus($event)">
+                                                       pattern="^01([0|1|6|7|8|9]{1})([0-9]{7,8})$">
                                             </div>
                                         </div>
                                     </div>

@@ -125,17 +125,6 @@ export class RegisterComponent implements OnInit {
 
     }
 
-    mobileNoFocusout(event) {
-        var pattern3 = /[~!@#$%^&*()_+|<>?:{}]/;	// 특수문자
-        let value = event.target.value;
-        if (value === '') {
-            return;
-        } else if (pattern3.test(value)) {
-            return;
-        } else if (value.length != 10 && value.length != 11) {
-            return;
-        }
-    }
 
 
 }
