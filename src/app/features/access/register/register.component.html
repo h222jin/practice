@@ -7,64 +7,99 @@
         </article>
     </div>
 
-    <div class="row">
-        <article class="col-md-4 col-md-offset-3" >
-            <div sa-widget [editbutton]="false" [custombutton]="false">
-                <header>
-                    <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-                    <h2>Visitor Register Form </h2>
-                </header>
-                <div>
-                    <div class="widget-body no-padding">
-                        <form id="review-form" class="smart-form" novalidate="novalidate">
-                            <fieldset>
-                                    <div class="alert alert-info">
-                                        <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 아래 세가지 내용은 모두 필수 입력 항목으로, 정확히 기재 해주세요.
-                                        <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 연락처는 '-'을 제외한 <strong>숫자만</strong> 넣어 주세요.
-                                        <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 그 외 문의사항은 <strong>'02-2222-2334'</strong>로 연락 바랍니다.
+    <sa-widgets-grid>
+        <div class="row">
+            <article class="col-md-5 col-md-offset-3">
+                <div sa-widget [editbutton]="false" [custombutton]="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                        <h2>Visitor Register Form </h2>
+                    </header>
+                    <div>
+                        <div class="widget-body">
+                            <div class="alert alert-info">
+                                <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 아래 세가지 내용은 모두 필수 입력 항목으로, 정확히 기재
+                                    해주세요. </p>
+                                <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 연락처는 '-'을 제외한
+                                    <strong>숫자만</strong>넣어 주세요.</p>
+                                <p><strong><i class="fa fa-check"></i> </strong> &nbsp; 그 외 문의사항은
+                                    <strong>'02-2222-2334'</strong>로연락 바랍니다.</p>
+                            </div>
+
+                            <form (ngSubmit)="onSubmit()" novalidate="novalidate"
+                                  [saBootstrapValidator]="validatorOptions">
+
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 selectContainer">
+                                                <label class="control-label"> 회사 </label>
+                                                <select name="company" class="form-control" [(ngModel)]="data.company"
+                                                        (focus)="mobileNoFocus($event)">
+                                                    <option value="" disabled> 방문 회사</option>
+                                                    <option [value]="company"
+                                                            *ngFor="let company of companyFilter">{{company}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <br>
-                                <section>
-                                    <label class="dropdown-toggle">
-                                        <select name="company" class="form-control" (change)="getCompany($event)">
-                                            <option value="" disabled> 방문 회사 </option>
-                                            <option [value]="company"
-                                                    *ngFor="let company of companyFilter">{{company}}</option>
-                                        </select>
-                                    </label>
-                                </section>
+                                </fieldset>
 
-                                <section>
-                                    <label class="input"> <i class="icon-append fa fa-user"></i>
-                                        <input type="text" name="name" id="name" placeholder="이름 * "
-                                        (change)="getName($event)"/>
-                                    </label>
-                                </section>
-
-                                <section>
-                                    <label class="input"> <i class="icon-append fa fa-phone"></i>
-                                        <input type="tel" name="mobileNo" id="mobileNo" placeholder="연락처 * "
-                                               pattern="^01([0|1|6|7|8|9]{1})([0-9]{7,8})$"
-                                               (focusout)="mobileNoFocusout($event)" (focus)="mobileNoFocus($event)"
-                                               (change)="getMobileNo($event)"/>
-                                    </label>
-                                </section>
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label class="control-label"> 이름 </label>
+                                                <input type="text" class="form-control" name="name" [(ngModel)]="data.name"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
 
 
 
-                            </fieldset>
-                            <footer>
-                                <button type="submit" class="btn btn-primary" [disabled]="regData" (click)="registerData()">
-                                    <h1 class="font-xs"> Register </h1>
-                                </button>
-                            </footer>
-                        </form>
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label class="control-label"> 연락처 </label>
+                                                <input type="text" class="form-control" name="mobileNo" [(ngModel)]="data.mobileNo"
+                                                       pattern="^01([0|1|6|7|8|9]{1})([0-9]{7,8})$"
+                                                       (focus)="mobileNoFocus($event)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+
+<!--                                <section>-->
+<!--                                    <label class="input"> <i class="icon-append fa fa-phone"></i>-->
+<!--                                        <input type="tel" name="mobileNo" id="mobileNo" placeholder="연락처 * "-->
+<!--                                               pattern="^01([0|1|6|7|8|9]{1})([0-9]{7,8})$"-->
+<!--                                               (focusout)="mobileNoFocusout($event)" (focus)="mobileNoFocus($event)"-->
+<!--                                               (change)="getMobileNo($event)"/>-->
+<!--                                    </label>-->
+<!--                                </section>-->
+
+
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fa fa-save"></i>
+                                                Register
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    </div>
+            </article>
+        </div>
+    </sa-widgets-grid>
 </div>
-
 
 

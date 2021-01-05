@@ -9,20 +9,58 @@ import {isDateValid} from "ngx-bootstrap";
 })
 export class RegisterComponent implements OnInit {
 
-
+    validatorOptions = {
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            name: {
+                group: '.col-sm-6',
+                validators: {
+                    notEmpty: {
+                        message: '성명을 입력해주세요'
+                    }
+                }
+            },
+            mobileNo: {
+                group: '.col-sm-6',
+                validators: {
+                    notEmpty: {
+                        message: '휴대폰 번호를 입력해주세요'
+                    },
+                    regexp: {
+                        message: '휴대폰 번호 형식의 숫자로만 입력해주세요'
+                    }
+                }
+            },
+            tenant: {
+                group: '.col-sm-6',
+                validators: {
+                    notEmpty: {
+                        message: '소속 회사명(테넌트)를 선택해주세요'
+                    }
+                }
+            }
+        }
+    }
 
     temp = [];
     rows = [];
     companyList = [];
     companyFilter = [];
-    regName: string;
-    regMobileNo: string;
-    regCompany: string;
 
-    public searchOptions = {
-        company: ''
+
+    public data = {
+        company: '',
+        name: '',
+        mobileNo: ''
     }
-    regData: boolean = false;
+
+
+    //regData: boolean = false;
+
 
     constructor(
         private jsonApiService: JsonApiService,
@@ -32,7 +70,7 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         // register button disabled
-        this.regData = true;
+        //this.regData = true;
         // option - company 설정
         this.jsonApiService.fetch('/_testData/test.json')
             .subscribe(data => {
@@ -43,42 +81,32 @@ export class RegisterComponent implements OnInit {
                     this.companyList.push(companies.company);
                 }
                 this.companyFilter = this.companyList.filter(
-                    (item, idx, array) => { return array.indexOf( item ) == idx; }
+                    (item, idx, array) => {
+                        return array.indexOf(item) == idx;
+                    }
                 )
             })
     }
 
 
-    getName(event) {
-        this.regName = event.target.value;
-    }
-    getMobileNo(event) {
-        this.regMobileNo = event.target.value;
-    }
-
-    getCompany(event) {
-        this.regCompany = event.target.value;
-    }
-
-    registerData() {
-        if(this.regMobileNo && this.regCompany && this.regName.length > 0) {
-            this.smartMessageBox();
-            this.mobileNoFocus(event);
+    onSubmit() {
+        if(!this.data.name || !this.data.company || !this.data.mobileNo) {
+            alert('정보를 모두 입력해 주세요.')
+            return;
         }
-         else {
-            alert('필수 항목을 모두 입력해 주세요.')
-        }
+        this.smartMessageBox()
     }
 
-    smartMessageBox(){
+
+    smartMessageBox() {
         this.notificationService.smartMessageBox({
             title: "<i class=\"fa fa-send-o\"></i>  &nbsp; 출입 등록 요청",
-            content: this.regCompany + "  방문을 위해 얼굴을 등록할 수 있는 URL이 포함된 MMS가 '" + this.regName + "'님의 휴대폰번호( '" + this.regMobileNo + "' )로 전송됩니다. 전송하시겠습니까?",
+            content: this.data.company + "  방문을 위해 얼굴을 등록할 수 있는 URL이 포함된 MMS가 '" + this.data.name + "'님의 휴대폰번호( '" + this.data.mobileNo + "' )로 전송됩니다. 전송하시겠습니까?",
             buttons: '[아니요][네]'
         }, (ButtonPressed) => {
-            if(ButtonPressed === "네") {
+            if (ButtonPressed === "네") {
                 this.notificationService.smallBox({
-                    title: this.regMobileNo+ " 로 전송 완료되 었습니다.",
+                    title: this.data.mobileNo + " 로 전송 완료되 었습니다.",
                     content: "<i class='fa fa-clock-o'></i> 이 알림은 곧 사라집니다.",
                     color: "#3F4B3B",
                     iconSmall: "fa fa-thumbs-up bounce animated",
@@ -103,17 +131,11 @@ export class RegisterComponent implements OnInit {
         if (value === '') {
             return;
         } else if (pattern3.test(value)) {
-            this.regData = true;
             return;
         } else if (value.length != 10 && value.length != 11) {
-            this.regData = true;
-            alert('특수문자를 제외한 숫자만 입력해주세요.');
             return;
         }
     }
 
-    mobileNoFocus(event) {
-        this.regData = false;
-    }
 
 }
