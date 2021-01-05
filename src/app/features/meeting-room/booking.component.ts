@@ -25,7 +25,7 @@ export class BookingComponent implements OnInit {
     }
 
     setItems(bookings: Array<Booking>) {
-        this.items = bookings.filter(it => it.state)
+        this.items = bookings.filter(it => it.status)
     }
 
 

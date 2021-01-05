@@ -13,6 +13,7 @@ import {SmartadminInputModule} from "@app/shared/forms/input/smartadmin-input.mo
 import {SmartadminValidationModule} from "@app/shared/forms/validation/smartadmin-validation.module";
 import {BookingService} from "@app/features/meeting-room/booking.service";
 import {BookingComponent} from "@app/features/meeting-room/booking.component";
+import {SmartadminFormsModule} from "@app/shared/forms/smartadmin-forms.module";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {BookingComponent} from "@app/features/meeting-room/booking.component";
         SmartadminWidgetsModule,
         SmartadminDatatableModule,
         RegisterModule,
-        SmartadminInputModule
+        SmartadminInputModule,
+        SmartadminFormsModule
 
     ],
     declarations: [MeetingRoomComponent, BookingComponent],

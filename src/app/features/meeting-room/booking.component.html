@@ -4,7 +4,8 @@
             <div>
                 <div class="form-inline">
                     <div class="row">
-                        <div sa-widget [editbutton]="false">
+                        <div sa-widget [colorbutton]="false" [editbutton]="false" [deletebutton]="false" [sortable]="false"
+                             [togglebutton]="false" [fullscreenbutton]="false" >
                             <header>
                                                             <span class="widget-icon"> <i
                                                                     class="fa fa-table"></i> </span>
@@ -17,22 +18,20 @@
                                         <table class="table table-bordered table-striped  smart-form">
                                             <thead>
                                             <tr>
-                                                <th class="text-align-center" style="width: auto;">room number</th>
-                                                <th class="text-align-center">leader</th>
+                                                <th class="text-align-center" style="width: auto;">room No.</th>
                                                 <th class="text-align-center">hours</th>
                                                 <th class="text-align-center">agenda</th>
-                                                <th class="text-align-center">state</th>
+                                                <th class="text-align-center">status</th>
                                                 <th class="text-align-center">startDate</th>
                                                 <th class="text-align-center">endDate</th>
                                             </tr>
                                             </thead>
                                             <tbody *ngFor="let one of items; let i=index">
                                             <tr>
-                                                <td>{{one.roomName}}</td>
-                                                <td>{{one.leader}}</td>
+                                                <td>{{one.roomNo}}</td>
                                                 <td>{{one.hours}}</td>
                                                 <td>{{one.agenda}}</td>
-                                                <td>{{one.state}}</td>
+                                                <td>{{one.status}}</td>
                                                 <td>{{one.startDate}}</td>
                                                 <td>{{one.endDate}}</td>
                                             </tr>
