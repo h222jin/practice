@@ -11,6 +11,7 @@ import {ApiGatewayService} from "@app/features/_service/api-gateway.service";
 import {API_URL_TOKEN} from "@app/app.token";
 import { ChartComponent } from './features/chart/chart.component';
 import { MeetingRoomComponent } from './features/meeting-room/meeting-room.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 
 
 @NgModule({

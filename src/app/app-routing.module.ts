@@ -42,6 +42,10 @@ const routes: Routes = [
       {
         path: "meetingRoom",
         loadChildren: "./features/meeting-room/meeting-room.module#MeetingRoomModule"
+      },
+      {
+        path: "dashboard",
+        loadChildren: "./features/dashboard/dashboard.module#DashboardModule"
       }
     ]
   }

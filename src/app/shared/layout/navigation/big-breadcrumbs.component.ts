@@ -4,8 +4,8 @@ import {Component, OnInit, Input} from '@angular/core';
 
   selector: 'sa-big-breadcrumbs',
   template: `
-   <div><h1 class="page-title txt-color-blueDark">
-   <i class="fa-fw fa fa-{{icon}}"> </i>&nbsp;{{items[0]}} 
+   <div><h1 class="page-title txt-color-blueDark"> &nbsp;
+     <i class="fa-fw fa fa-{{icon}}"> </i>&nbsp;{{items[0]}}
    <span *ngFor="let item of items.slice(1)"> {{item}}</span>
 </h1></div>
   `,

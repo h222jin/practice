@@ -53,7 +53,7 @@ export class MeetingRoomComponent implements OnInit {
                 }
             },
             startDate: {
-                group: '.col-sm-4',
+                group: '.col-md-4',
                 validators: {
                     notEmpty: {
                         message: '원하는 예약 날짜를 확인해 주세요'
@@ -61,7 +61,7 @@ export class MeetingRoomComponent implements OnInit {
                 }
             },
             endDate: {
-                group: '.col-sm-4',
+                group: '.col-md-4',
                 validators: {
                     notEmpty: {
                         message: '원하는 예약 종료 날짜를 확인해 주세요'
@@ -69,7 +69,7 @@ export class MeetingRoomComponent implements OnInit {
                 }
             },
             hours: {
-                group: '.col-sm-4',
+                group: '.col-md-4',
                 validators: {
                     notEmpty: {
                         message: '원하는 사용 시간을 선택해 주세요'
