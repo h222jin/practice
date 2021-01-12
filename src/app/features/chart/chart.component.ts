@@ -1,9 +1,6 @@
 import {Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {JsonApiService} from "@app/core/services";
 import {DatatableComponent} from "@swimlane/ngx-datatable";
-import {isJsObject} from "@angular/core/src/change_detection/change_detection_util";
-import {count} from "rxjs/operators";
-import {enableBindings} from "@angular/core/src/render3";
 
 @Component({
     selector: 'ea-chart',
