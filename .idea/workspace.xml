@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c4f07441-554d-45f3-9cf1-490b9fbfff2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/smartadmin.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/smartadmin.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/dashboard/dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/dashboard/dashboard.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/dashboard/dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/dashboard/dashboard.component.ts" afterDir="false" />
     </list>
@@ -76,6 +78,19 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (smartadmin-angular-seed-e2e)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -168,7 +183,7 @@
       <workItem from="1610595894062" duration="1454000" />
       <workItem from="1610608251544" duration="1819000" />
       <workItem from="1610673653215" duration="5591000" />
-      <workItem from="1610680451333" duration="2739000" />
+      <workItem from="1610680451333" duration="7642000" />
     </task>
     <servers />
   </component>
@@ -265,13 +280,13 @@
       <screen x="0" y="25" width="1920" height="1175" />
     </state>
     <state x="474" y="288" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1920.1175@0.25.1920.1175" timestamp="1609135781367" />
-    <state x="-1619" y="343" width="1053" height="539" key="find.popup" timestamp="1610529348916">
+    <state x="-1619" y="343" width="1053" height="539" key="find.popup" timestamp="1610688069529">
       <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
     <state x="-1619" y="326" width="1053" height="551" key="find.popup/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1610424166063" />
     <state x="1699" y="290" width="1052" height="522" key="find.popup/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605606539572" />
     <state x="-744" y="-737" width="1053" height="538" key="find.popup/0.25.1680.1025/-1045.-1055.1920.1055@-1045.-1055.1920.1055" timestamp="1610356774813" />
-    <state x="-1619" y="343" width="1053" height="539" key="find.popup/0.25.1680.1025/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1610529348916" />
+    <state x="-1619" y="343" width="1053" height="539" key="find.popup/0.25.1680.1025/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1610688069529" />
     <state x="263" y="334" width="921" height="522" key="find.popup/0.25.1680.1025/-1920.25.1920.1055@0.25.1680.1025" timestamp="1610343680229" />
     <state x="300" y="379" width="1052" height="581" key="find.popup/0.25.1920.1175@0.25.1920.1175" timestamp="1610099340475" />
     <state x="572" y="492" width="350" height="300" key="org.angular.cli.generate" timestamp="1607325113763">

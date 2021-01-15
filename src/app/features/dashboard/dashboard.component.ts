@@ -11,17 +11,14 @@ export class DashboardComponent implements OnInit {
     tower: any = [
         {
             "name": "1F",
-            "action": false,
-            "status": "none"
+            "action": 0
         },
         {
             "name": "2F",
-            "action": false,
-            "status": "none"
+            "action": 0
         }, {
             "name": "3F",
-            "action": false,
-            "status": "none"
+            "action": 0
         }
     ];
 
@@ -35,6 +32,9 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit() {
+
+
+
         // 층 오름차순 정렬
         this.tower.sort(function (a, b) {
             console.log(a);
@@ -50,22 +50,17 @@ export class DashboardComponent implements OnInit {
         }
     }
 
-    click(floor) {
+    click(layer) {
         this.action = true;
-        console.log(floor)
-
-
     }
 
     change(layer) {
-        layer.status = "alert";
         this.clicked = false
-        layer.action = true;
+        layer.action = 1;
         new Promise(() => {
             setTimeout(() => {
-                layer.status = "none";
                 this.clicked = true;
-                layer.action = false;
+                layer.action = 0;
             }, 1000)
         })
 

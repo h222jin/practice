@@ -62,13 +62,12 @@
 
                                     <div>
                                         <div class="widget-body no-padding">
-
                                                 <div *ngFor="let layer of tower" [ngSwitch]="layer.action">
                                                     <div *ngSwitchCase="false"
                                                          (click)="change(layer)">
                                                         <img src="/assets/img/test.png"
                                                              style="height: 100px;">
-                                                        <div class="col-md-1">
+                                                        <div class="col-md-2">
                                                             <h1>{{layer.name}}</h1>
                                                         </div>
                                                     </div>
@@ -76,12 +75,11 @@
                                                          class="eventFloor txt-color-white">
                                                         <img src="/assets/img/test.png"
                                                              style="height: 100px;">
-                                                        <div class="col-md-1">
+                                                        <div class="col-md-2">
                                                             <h1>{{layer.name}}</h1>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -98,4 +96,3 @@
 
 
 <!-- Time line end -->
-
