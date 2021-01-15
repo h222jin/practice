@@ -6,6 +6,7 @@ import {SmartadminWidgetsModule} from "@app/shared/widgets/smartadmin-widgets.mo
 import {NgxDatatableModule} from "@swimlane/ngx-datatable";
 import {DashboardComponent} from "@app/features/dashboard/dashboard.component";
 import {routing} from "@app/features/dashboard/dashboard.routing";
+import {ExampleComponent} from "@app/features/dashboard/example.component";
 
 @NgModule({
     imports: [
